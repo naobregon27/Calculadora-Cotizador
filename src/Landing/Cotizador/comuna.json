@@ -1,0 +1,692 @@
+[
+ {
+  "Comuna": "Cauquenes",
+  "Generación kwh kwp año": 1643,
+  "Costo combustible mas peaje": 41900,
+  "Valor venta energía": 102.976
+ },
+ {
+  "Comuna": "Chanco",
+  "Generación kwh kwp año": 1640,
+  "Costo combustible mas peaje": 207200,
+  "Valor venta energía": 102.976
+ },
+ {
+  "Comuna": "Colbun",
+  "Generación kwh kwp año": 1538,
+  "Costo combustible mas peaje": 70880,
+  "Valor venta energía": 68.322
+ },
+ {
+  "Comuna": "Constitucion",
+  "Generación kwh kwp año": 1613,
+  "Costo combustible mas peaje": 89220,
+  "Valor venta energía": 96.785
+ },
+ {
+  "Comuna": "Curepto",
+  "Generación kwh kwp año": 1632,
+  "Costo combustible mas peaje": 90900,
+  "Valor venta energía": 102.976
+ },
+ {
+  "Comuna": "Curico",
+  "Generación kwh kwp año": 1557,
+  "Costo combustible mas peaje": 94080,
+  "Valor venta energía": 102.976
+ },
+ {
+  "Comuna": "Empedrado",
+  "Generación kwh kwp año": 1672,
+  "Costo combustible mas peaje": 88340,
+  "Valor venta energía": 102.976
+ },
+ {
+  "Comuna": "Hualañe",
+  "Generación kwh kwp año": 1636,
+  "Costo combustible mas peaje": 89580,
+  "Valor venta energía": 102.976
+ },
+ {
+  "Comuna": "Licanten",
+  "Generación kwh kwp año": 1627,
+  "Costo combustible mas peaje": 93760,
+  "Valor venta energía": 102.976
+ },
+ {
+  "Comuna": "Linares",
+  "Generación kwh kwp año": 1535,
+  "Costo combustible mas peaje": 64500,
+  "Valor venta energía": 102.976
+ },
+ {
+  "Comuna": "Longavi",
+  "Generación kwh kwp año": 1552,
+  "Costo combustible mas peaje": 60540,
+  "Valor venta energía": 102.976
+ },
+ {
+  "Comuna": "Maule",
+  "Generación kwh kwp año": 1586,
+  "Costo combustible mas peaje": 80120,
+  "Valor venta energía": 102.976
+ },
+ {
+  "Comuna": "Molina",
+  "Generación kwh kwp año": 1586,
+  "Costo combustible mas peaje": 93260,
+  "Valor venta energía": 102.976
+ },
+ {
+  "Comuna": "Parral",
+  "Generación kwh kwp año": 1568,
+  "Costo combustible mas peaje": 50540,
+  "Valor venta energía": 102.976
+ },
+ {
+  "Comuna": "Pelarco",
+  "Generación kwh kwp año": 1548,
+  "Costo combustible mas peaje": 79680,
+  "Valor venta energía": 102.976
+ },
+ {
+  "Comuna": "Pelluhue",
+  "Generación kwh kwp año": 1611,
+  "Costo combustible mas peaje": 50260,
+  "Valor venta energía": 102.976
+ },
+ {
+  "Comuna": "Pencahue",
+  "Generación kwh kwp año": 1602,
+  "Costo combustible mas peaje": 78360,
+  "Valor venta energía": 102.976
+ },
+ {
+  "Comuna": "Rauco",
+  "Generación kwh kwp año": 1567,
+  "Costo combustible mas peaje": 96500,
+  "Valor venta energía": 102.976
+ },
+ {
+  "Comuna": "Retiro",
+  "Generación kwh kwp año": 1569,
+  "Costo combustible mas peaje": 52300,
+  "Valor venta energía": 102.976
+ },
+ {
+  "Comuna": "Rio Claro",
+  "Generación kwh kwp año": 1546,
+  "Costo combustible mas peaje": 314780,
+  "Valor venta energía": 102.976
+ },
+ {
+  "Comuna": "Romeral",
+  "Generación kwh kwp año": 1576,
+  "Costo combustible mas peaje": 96060,
+  "Valor venta energía": 102.976
+ },
+ {
+  "Comuna": "Sagrada Familia",
+  "Generación kwh kwp año": 1598,
+  "Costo combustible mas peaje": 96340,
+  "Valor venta energía": 102.976
+ },
+ {
+  "Comuna": "San Clemente",
+  "Generación kwh kwp año": 1545,
+  "Costo combustible mas peaje": 78800,
+  "Valor venta energía": 92.362
+ },
+ {
+  "Comuna": "San Javier",
+  "Generación kwh kwp año": 1575,
+  "Costo combustible mas peaje": 70880,
+  "Valor venta energía": 102.976
+ },
+ {
+  "Comuna": "San Rafael",
+  "Generación kwh kwp año": 1578,
+  "Costo combustible mas peaje": 69560,
+  "Valor venta energía": 102.976
+ },
+ {
+  "Comuna": "Talca",
+  "Generación kwh kwp año": 1578,
+  "Costo combustible mas peaje": 75280,
+  "Valor venta energía": 102.976
+ },
+ {
+  "Comuna": "Teno",
+  "Generación kwh kwp año": 1582,
+  "Costo combustible mas peaje": 97820,
+  "Valor venta energía": 96.785
+ },
+ {
+  "Comuna": "Vichuquén",
+  "Generación kwh kwp año": 1622,
+  "Costo combustible mas peaje": 97060,
+  "Valor venta energía": 102.976
+ },
+ {
+  "Comuna": "Villa Alegre",
+  "Generación kwh kwp año": 1577,
+  "Costo combustible mas peaje": 69120,
+  "Valor venta energía": 102.976
+ },
+ {
+  "Comuna": "Yerbas Buenas",
+  "Generación kwh kwp año": 1546,
+  "Costo combustible mas peaje": 68020,
+  "Valor venta energía": 96.785
+ },
+ {
+  "Comuna": "Bulnes",
+  "Generación kwh kwp año": 1577,
+  "Costo combustible mas peaje": 37860,
+  "Valor venta energía": 90.142
+ },
+ {
+  "Comuna": "Chillan",
+  "Generación kwh kwp año": 1559,
+  "Costo combustible mas peaje": 37860,
+  "Valor venta energía": 102.976
+ },
+ {
+  "Comuna": "Chillan Viejo",
+  "Generación kwh kwp año": 1559,
+  "Costo combustible mas peaje": 37860,
+  "Valor venta energía": 102.976
+ },
+ {
+  "Comuna": "Cobquecura",
+  "Generación kwh kwp año": 1619,
+  "Costo combustible mas peaje": 37940,
+  "Valor venta energía": 82.644
+ },
+ {
+  "Comuna": "Coelemu",
+  "Generación kwh kwp año": 1595,
+  "Costo combustible mas peaje": 24080,
+  "Valor venta energía": 89.357
+ },
+ {
+  "Comuna": "Coihueco",
+  "Generación kwh kwp año": 1573,
+  "Costo combustible mas peaje": 43280,
+  "Valor venta energía": 90.109
+ },
+ {
+  "Comuna": "El Carmen",
+  "Generación kwh kwp año": 1563,
+  "Costo combustible mas peaje": 35860,
+  "Valor venta energía": 90.322
+ },
+ {
+  "Comuna": "Ninhue",
+  "Generación kwh kwp año": 1607,
+  "Costo combustible mas peaje": 35520,
+  "Valor venta energía": 89.234
+ },
+ {
+  "Comuna": "Ñiquen",
+  "Generación kwh kwp año": 1601,
+  "Costo combustible mas peaje": 49000,
+  "Valor venta energía": 102.976
+ },
+ {
+  "Comuna": "Pemuco",
+  "Generación kwh kwp año": 1566,
+  "Costo combustible mas peaje": 32560,
+  "Valor venta energía": 89.956
+ },
+ {
+  "Comuna": "Pinto",
+  "Generación kwh kwp año": 1589,
+  "Costo combustible mas peaje": 42700,
+  "Valor venta energía": 88.91
+ },
+ {
+  "Comuna": "Portezuelo",
+  "Generación kwh kwp año": 1606,
+  "Costo combustible mas peaje": 26420,
+  "Valor venta energía": 89.443
+ },
+ {
+  "Comuna": "Quillon",
+  "Generación kwh kwp año": 1575,
+  "Costo combustible mas peaje": 31400,
+  "Valor venta energía": 89.763
+ },
+ {
+  "Comuna": "Quirihue",
+  "Generación kwh kwp año": 1646,
+  "Costo combustible mas peaje": 31120,
+  "Valor venta energía": 90.204
+ },
+ {
+  "Comuna": "Ranquil",
+  "Generación kwh kwp año": 1564,
+  "Costo combustible mas peaje": 34920,
+  "Valor venta energía": 80.976
+ },
+ {
+  "Comuna": "San Carlos",
+  "Generación kwh kwp año": 1578,
+  "Costo combustible mas peaje": 43140,
+  "Valor venta energía": 89.864
+ },
+ {
+  "Comuna": "San Fabian",
+  "Generación kwh kwp año": 1566,
+  "Costo combustible mas peaje": 59420,
+  "Valor venta energía": 89.236
+ },
+ {
+  "Comuna": "San Ignacio",
+  "Generación kwh kwp año": 1579,
+  "Costo combustible mas peaje": 44020,
+  "Valor venta energía": 90.126
+ },
+ {
+  "Comuna": "San Nicolas",
+  "Generación kwh kwp año": 1592,
+  "Costo combustible mas peaje": 41300,
+  "Valor venta energía": 90.099
+ },
+ {
+  "Comuna": "Treguaco",
+  "Generación kwh kwp año": 1617,
+  "Costo combustible mas peaje": 27380,
+  "Valor venta energía": 89.333
+ },
+ {
+  "Comuna": "Yungay",
+  "Generación kwh kwp año": 1568,
+  "Costo combustible mas peaje": 33900,
+  "Valor venta energía": 88.804
+ },
+ {
+  "Comuna": "Alto Bío Bío",
+  "Generación kwh kwp año": 1460,
+  "Costo combustible mas peaje": 26420,
+  "Valor venta energía": 42.973
+ },
+ {
+  "Comuna": "Antuco",
+  "Generación kwh kwp año": 1536,
+  "Costo combustible mas peaje": 46660,
+  "Valor venta energía": 60.366
+ },
+ {
+  "Comuna": "Arauco",
+  "Generación kwh kwp año": 1529,
+  "Costo combustible mas peaje": 19100,
+  "Valor venta energía": 88.804
+ },
+ {
+  "Comuna": "Cabrero",
+  "Generación kwh kwp año": 1552,
+  "Costo combustible mas peaje": 24200,
+  "Valor venta energía": 84.745
+ },
+ {
+  "Comuna": "Cañete",
+  "Generación kwh kwp año": 1471,
+  "Costo combustible mas peaje": 34380,
+  "Valor venta energía": 94.484
+ },
+ {
+  "Comuna": "Chiguayante",
+  "Generación kwh kwp año": 1526,
+  "Costo combustible mas peaje": 3300,
+  "Valor venta energía": 102.976
+ },
+ {
+  "Comuna": "Concepcion",
+  "Generación kwh kwp año": 1555,
+  "Costo combustible mas peaje": 26420,
+  "Valor venta energía": 102.976
+ },
+ {
+  "Comuna": "Contulmo",
+  "Generación kwh kwp año": 1406,
+  "Costo combustible mas peaje": 42080,
+  "Valor venta energía": 94.484
+ },
+ {
+  "Comuna": "Coronel",
+  "Generación kwh kwp año": 1564,
+  "Costo combustible mas peaje": 4840,
+  "Valor venta energía": 70.815
+ },
+ {
+  "Comuna": "Curanilahue",
+  "Generación kwh kwp año": 1476,
+  "Costo combustible mas peaje": 23940,
+  "Valor venta energía": 87.437
+ },
+ {
+  "Comuna": "Florida",
+  "Generación kwh kwp año": 1590,
+  "Costo combustible mas peaje": 26120,
+  "Valor venta energía": 94.484
+ },
+ {
+  "Comuna": "Hualpen",
+  "Generación kwh kwp año": 1579,
+  "Costo combustible mas peaje": 26420,
+  "Valor venta energía": 102.976
+ },
+ {
+  "Comuna": "Hualqui",
+  "Generación kwh kwp año": 1509,
+  "Costo combustible mas peaje": 5720,
+  "Valor venta energía": 87.437
+ },
+ {
+  "Comuna": "Laja",
+  "Generación kwh kwp año": 1549,
+  "Costo combustible mas peaje": 35860,
+  "Valor venta energía": 88.804
+ },
+ {
+  "Comuna": "Lebu",
+  "Generación kwh kwp año": 1523,
+  "Costo combustible mas peaje": 30520,
+  "Valor venta energía": 88.804
+ },
+ {
+  "Comuna": "Los Alamos",
+  "Generación kwh kwp año": 1496,
+  "Costo combustible mas peaje": 43800,
+  "Valor venta energía": 94.484
+ },
+ {
+  "Comuna": "Los Angeles",
+  "Generación kwh kwp año": 1535,
+  "Costo combustible mas peaje": 37700,
+  "Valor venta energía": 94.484
+ },
+ {
+  "Comuna": "Lota",
+  "Generación kwh kwp año": 1523,
+  "Costo combustible mas peaje": 9480,
+  "Valor venta energía": 87.437
+ },
+ {
+  "Comuna": "Mulchen",
+  "Generación kwh kwp año": 1519,
+  "Costo combustible mas peaje": 26420,
+  "Valor venta energía": 94.484
+ },
+ {
+  "Comuna": "Nacimiento",
+  "Generación kwh kwp año": 1531,
+  "Costo combustible mas peaje": 24420,
+  "Valor venta energía": 88.804
+ },
+ {
+  "Comuna": "Negrete",
+  "Generación kwh kwp año": 1546,
+  "Costo combustible mas peaje": 28160,
+  "Valor venta energía": 88.804
+ },
+ {
+  "Comuna": "Penco",
+  "Generación kwh kwp año": 1535,
+  "Costo combustible mas peaje": 9960,
+  "Valor venta energía": 102.976
+ },
+ {
+  "Comuna": "Quilaco",
+  "Generación kwh kwp año": 1536,
+  "Costo combustible mas peaje": 46280,
+  "Valor venta energía": 46.436
+ },
+ {
+  "Comuna": "Quilleco",
+  "Generación kwh kwp año": 1545,
+  "Costo combustible mas peaje": 42040,
+  "Valor venta energía": 84.745
+ },
+ {
+  "Comuna": "San Pedro de la Paz",
+  "Generación kwh kwp año": 1591,
+  "Costo combustible mas peaje": 4400,
+  "Valor venta energía": 102.976
+ },
+ {
+  "Comuna": "San Rosendo",
+  "Generación kwh kwp año": 1563,
+  "Costo combustible mas peaje": 35640,
+  "Valor venta energía": 94.484
+ },
+ {
+  "Comuna": "Santa Barbara",
+  "Generación kwh kwp año": 1530,
+  "Costo combustible mas peaje": 26420,
+  "Valor venta energía": 76.619
+ },
+ {
+  "Comuna": "Santa Juana",
+  "Generación kwh kwp año": 1521,
+  "Costo combustible mas peaje": 10780,
+  "Valor venta energía": 94.484
+ },
+ {
+  "Comuna": "Talcahuano",
+  "Generación kwh kwp año": 1619,
+  "Costo combustible mas peaje": 7840,
+  "Valor venta energía": 102.976
+ },
+ {
+  "Comuna": "Tirua",
+  "Generación kwh kwp año": 1510,
+  "Costo combustible mas peaje": 26420,
+  "Valor venta energía": 94.484
+ },
+ {
+  "Comuna": "Tome",
+  "Generación kwh kwp año": 1538,
+  "Costo combustible mas peaje": 13700,
+  "Valor venta energía": 94.484
+ },
+ {
+  "Comuna": "Tucapel",
+  "Generación kwh kwp año": 1547,
+  "Costo combustible mas peaje": 36320,
+  "Valor venta energía": 94.484
+ },
+ {
+  "Comuna": "Yumbel",
+  "Generación kwh kwp año": 1564,
+  "Costo combustible mas peaje": 23320,
+  "Valor venta energía": 94.484
+ },
+ {
+  "Comuna": "Angol",
+  "Generación kwh kwp año": 1492,
+  "Costo combustible mas peaje": 26420,
+  "Valor venta energía": 94.484
+ },
+ {
+  "Comuna": "Carahue",
+  "Generación kwh kwp año": 1382,
+  "Costo combustible mas peaje": 90280,
+  "Valor venta energía": 94.484
+ },
+ {
+  "Comuna": "Cholchol",
+  "Generación kwh kwp año": 1408,
+  "Costo combustible mas peaje": 81040,
+  "Valor venta energía": 94.484
+ },
+ {
+  "Comuna": "Collipulli",
+  "Generación kwh kwp año": 1492,
+  "Costo combustible mas peaje": 56840,
+  "Valor venta energía": 88.804
+ },
+ {
+  "Comuna": "Cunco",
+  "Generación kwh kwp año": 1374,
+  "Costo combustible mas peaje": 99140,
+  "Valor venta energía": 94.484
+ },
+ {
+  "Comuna": "Curacautin",
+  "Generación kwh kwp año": 1443,
+  "Costo combustible mas peaje": 26420,
+  "Valor venta energía": 94.484
+ },
+ {
+  "Comuna": "Curarrehue",
+  "Generación kwh kwp año": 1390,
+  "Costo combustible mas peaje": 122400,
+  "Valor venta energía": 102.976
+ },
+ {
+  "Comuna": "Ercilla",
+  "Generación kwh kwp año": 1488,
+  "Costo combustible mas peaje": 59920,
+  "Valor venta energía": 94.484
+ },
+ {
+  "Comuna": "Freire",
+  "Generación kwh kwp año": 1369,
+  "Costo combustible mas peaje": 97540,
+  "Valor venta energía": 94.484
+ },
+ {
+  "Comuna": "Galvarino",
+  "Generación kwh kwp año": 1436,
+  "Costo combustible mas peaje": 53540,
+  "Valor venta energía": 94.484
+ },
+ {
+  "Comuna": "Gorbea",
+  "Generación kwh kwp año": 1368,
+  "Costo combustible mas peaje": 91060,
+  "Valor venta energía": 94.484
+ },
+ {
+  "Comuna": "Lautaro",
+  "Generación kwh kwp año": 1403,
+  "Costo combustible mas peaje": 79500,
+  "Valor venta energía": 88.804
+ },
+ {
+  "Comuna": "Loncoche",
+  "Generación kwh kwp año": 1333,
+  "Costo combustible mas peaje": 111240,
+  "Valor venta energía": 102.976
+ },
+ {
+  "Comuna": "Lonquimay",
+  "Generación kwh kwp año": 1496,
+  "Costo combustible mas peaje": 92540,
+  "Valor venta energía": 76.619
+ },
+ {
+  "Comuna": "Los Sauces",
+  "Generación kwh kwp año": 1464,
+  "Costo combustible mas peaje": 39600,
+  "Valor venta energía": 94.484
+ },
+ {
+  "Comuna": "Lumaco",
+  "Generación kwh kwp año": 1449,
+  "Costo combustible mas peaje": 44660,
+  "Valor venta energía": 94.484
+ },
+ {
+  "Comuna": "Melipeuco",
+  "Generación kwh kwp año": 1418,
+  "Costo combustible mas peaje": 106180,
+  "Valor venta energía": 84.745
+ },
+ {
+  "Comuna": "Nueva Imperial",
+  "Generación kwh kwp año": 1393,
+  "Costo combustible mas peaje": 85660,
+  "Valor venta energía": 94.484
+ },
+ {
+  "Comuna": "Padre las Casas",
+  "Generación kwh kwp año": 1348,
+  "Costo combustible mas peaje": 87920,
+  "Valor venta energía": 94.484
+ },
+ {
+  "Comuna": "Perquenco",
+  "Generación kwh kwp año": 1430,
+  "Costo combustible mas peaje": 75980,
+  "Valor venta energía": 94.484
+ },
+ {
+  "Comuna": "Pitrufquen",
+  "Generación kwh kwp año": 1378,
+  "Costo combustible mas peaje": 98420,
+  "Valor venta energía": 94.484
+ },
+ {
+  "Comuna": "Pucon",
+  "Generación kwh kwp año": 1336,
+  "Costo combustible mas peaje": 115580,
+  "Valor venta energía": 94.484
+ },
+ {
+  "Comuna": "Puren",
+  "Generación kwh kwp año": 1436,
+  "Costo combustible mas peaje": 26420,
+  "Valor venta energía": 94.484
+ },
+ {
+  "Comuna": "Renaico",
+  "Generación kwh kwp año": 1554,
+  "Costo combustible mas peaje": 29480,
+  "Valor venta energía": 84.745
+ },
+ {
+  "Comuna": "Temuco",
+  "Generación kwh kwp año": 1348,
+  "Costo combustible mas peaje": 84780,
+  "Valor venta energía": 94.484
+ },
+ {
+  "Comuna": "Teodoro Schmidt",
+  "Generación kwh kwp año": 1372,
+  "Costo combustible mas peaje": 107000,
+  "Valor venta energía": 94.484
+ },
+ {
+  "Comuna": "Totlen",
+  "Generación kwh kwp año": 1440,
+  "Costo combustible mas peaje": 26420,
+  "Valor venta energía": 94.484
+ },
+ {
+  "Comuna": "Traiguen",
+  "Generación kwh kwp año": 1293,
+  "Costo combustible mas peaje": 26420,
+  "Valor venta energía": 94.484
+ },
+ {
+  "Comuna": "Victoria",
+  "Generación kwh kwp año": 1282,
+  "Costo combustible mas peaje": 66580,
+  "Valor venta energía": 94.484
+ },
+ {
+  "Comuna": "Vilcun",
+  "Generación kwh kwp año": 1227,
+  "Costo combustible mas peaje": 26420,
+  "Valor venta energía": 94.484
+ },
+ {
+  "Comuna": "Villarrica",
+  "Generación kwh kwp año": 1212,
+  "Costo combustible mas peaje": 150500,
+  "Valor venta energía": 94.484
+ }
+]

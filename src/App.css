@@ -1,0 +1,32 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz,wght@8..144,300;8..144,600;8..144,400,&display=swap');
+
+body{
+   margin: 0;
+   width: 100%;
+   font-display: center;
+   background-color: rgb(16, 96, 214); 
+   color: #ffffff;
+   font-family: 'Roboto Flex', sans-serif;
+   overflow-x: hidden;
+   user-select: none;
+    
+}
+
+.hola{
+
+   color: rgb(255, 145, 0);
+}
+.titulo{
+   color: black;
+}
+body::-webkit-scrollbar{
+   background: transparent;
+   border-radius: 100rem;
+   width: 8px;
+}
+
+body::-webkit-scrollbar-thumb{
+   background-color: #ffffff;
+   border-radius: 100rem;
+   width: 10px;
+}
