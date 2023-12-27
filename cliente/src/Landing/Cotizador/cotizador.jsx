@@ -158,11 +158,11 @@ const Formulario = () => {
 
   const GeneracionKwhKwpYear = comuna?.find(
     (x) => x.comunas?.toLowerCase() === comunas?.toLowerCase()
-  )?.["Generación kwh kwp año"];
+  )?.["Generaciónkwhkwpaño"];
 
   const valorVentaDeEnergia = comuna?.find(
     (x) => x.comunas?.toLowerCase() === comunas?.toLowerCase()
-  )?.["Valor venta energía"];
+  )?.["Valorventaenergía"];
 
   //! valor del kit
   const kit = {
