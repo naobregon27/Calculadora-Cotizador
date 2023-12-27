@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <%- include('partials/header') %>
+    <title>New Comuna</title>
+</head>
+
+<body>
+
+  <%- include('partials/navigation') %>
+    <div class="container p-4">
+
+      <div class="row">
+
+        <div class="col-md-4 mx-auto">
+
+          <form method="POST" target="/new-entry" class="card bg-dark text-light card-body">
+
+            <div class="mb-3">
+              <label for="Comuna">Comuna</label>
+              <input name="Comuna" type="text" class="form-control rounded-0" placeholder="Entry a New Comuna" autofocus
+                required>
+            </div>
+
+            <div class="mb-3">
+              <label for="GeneraciónKwhKwpAño">GeneraciónKwhKwpAño</label>
+              <input name="GeneraciónKwhKwpAño" type="text" class="form-control rounded-0" placeholder="GeneraciónKwhKwpAño" autofocus required>
+            </div>
+
+            <div class="mb-3">
+              <label for="CostoCombustibleMasPeaje">CostoCombustibleMasPeaje</label>
+              <input name="CostoCombustibleMasPeaje" class="form-control" placeholder="CostoCombustibleMasPeaje" required>
+            </div>
+
+            <div class="mb-3">
+              <label for="ValorVentaEnergía">ValorVentaEnergía</label>
+              <input class="form-control" name="ValorVentaEnergía" rows="2"
+              placeholder="ValorVentaEnergía"  required>
+            </div>
+
+            <div class="mb-3">
+              <input type="submit" value="Post Entry" class="btn btn-primary">
+            </div>
+          </form>
+        </div>
+      </div>
+
+    </div>
+
+    <%- include('partials/footer')%>
+</body>
+
+</html>

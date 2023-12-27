@@ -1,12 +1,10 @@
-
 import React, { useEffect, useState } from "react";
-import comuna from "../Cotizador/comuna.json";
-import "./cotizador.css"
-
+import comuna from "../../../../Server/src/comunas.json";
+import "./cotizador.css";
 
 const Formulario = () => {
+  const [comunas, setComunas] = useState("");
   const [input, setInput] = useState({
-    comuna: "",
     consumo1: "",
     consumo2: "",
     consumo3: "",
@@ -22,12 +20,27 @@ const Formulario = () => {
   });
 
   const handleComuna = (e) => {
-    setInput({
-      ...input,
-      comuna: e.target.value,
-    });
+    setComunas(e.target.value);
   };
-//!handle consumo 12 meses
+
+  useEffect(() => {
+    setInput({
+      consumo1: "",
+      consumo2: "",
+      consumo3: "",
+      consumo4: "",
+      consumo5: "",
+      consumo6: "",
+      consumo7: "",
+      consumo8: "",
+      consumo9: "",
+      consumo10: "",
+      consumo11: "",
+      consumo12: "",
+    });
+  }, [comunas]);
+
+  //!handle consumo 12 meses
   const handleConsumo1 = (e) => {
     setInput({
       ...input,
@@ -112,30 +125,44 @@ const Formulario = () => {
     });
   };
 
-//---------------------------------------------------------------------------------------
-  
+  //---------------------------------------------------------------------------------------
+
   //!Valor historico
 
-  var inputValor1= parseFloat(input.consumo1);
-  var inputValor2= parseFloat(input.consumo2);
-  var inputValor3= parseFloat(input.consumo3);
-  var inputValor4= parseFloat(input.consumo4);
-  var inputValor5= parseFloat(input.consumo5);
-  var inputValor6= parseFloat(input.consumo6);
-  var inputValor7= parseFloat(input.consumo7);
-  var inputValor8= parseFloat(input.consumo8);
-  var inputValor9= parseFloat(input.consumo9);
-  var inputValor10= parseFloat(input.consumo10);
-  var inputValor11= parseFloat(input.consumo11);
-  var inputValor12= parseFloat(input.consumo12);
+  var inputValor1 = parseFloat(input.consumo1);
+  var inputValor2 = parseFloat(input.consumo2);
+  var inputValor3 = parseFloat(input.consumo3);
+  var inputValor4 = parseFloat(input.consumo4);
+  var inputValor5 = parseFloat(input.consumo5);
+  var inputValor6 = parseFloat(input.consumo6);
+  var inputValor7 = parseFloat(input.consumo7);
+  var inputValor8 = parseFloat(input.consumo8);
+  var inputValor9 = parseFloat(input.consumo9);
+  var inputValor10 = parseFloat(input.consumo10);
+  var inputValor11 = parseFloat(input.consumo11);
+  var inputValor12 = parseFloat(input.consumo12);
 
-
-
-  const valorHistorico = inputValor1 + inputValor2 + inputValor3 + inputValor4 + inputValor5 + inputValor6 + inputValor7 + inputValor8 + inputValor9 + inputValor10 + inputValor11 + inputValor12;
+  const valorHistorico =
+    inputValor1 +
+    inputValor2 +
+    inputValor3 +
+    inputValor4 +
+    inputValor5 +
+    inputValor6 +
+    inputValor7 +
+    inputValor8 +
+    inputValor9 +
+    inputValor10 +
+    inputValor11 +
+    inputValor12;
 
   const GeneracionKwhKwpYear = comuna?.find(
-    (x) => x.Comuna?.toLowerCase() === input.comuna?.toLowerCase()
+    (x) => x.comunas?.toLowerCase() === comunas?.toLowerCase()
   )?.["Generación kwh kwp año"];
+
+  const valorVentaDeEnergia = comuna?.find(
+    (x) => x.comunas?.toLowerCase() === comunas?.toLowerCase()
+  )?.["Valor venta energía"];
 
   //! valor del kit
   const kit = {
@@ -186,21 +213,67 @@ const Formulario = () => {
       valorDelcombustible = combustible.tresmil;
     }
   }
+  //! para el ahorro
+  let valorUsar = [];
+  const kw = {
+    uno: 5412,
+    dos: 5412,
+    tres: 18040,
+  };
+  if (valorHistorico) {
+    if (valorHistorico < 3 * GeneracionKwhKwpYear) {
+      valorUsar = kw.uno;
+    }
+    if (
+      valorHistorico > 3 * GeneracionKwhKwpYear &&
+      valorHistorico < 5 * GeneracionKwhKwpYear
+    ) {
+      valorUsar = kw.dos;
+    }
+    if (
+      valorHistorico > 5 * GeneracionKwhKwpYear &&
+      valorHistorico < 10 * GeneracionKwhKwpYear
+    ) {
+      valorUsar = kw.tres;
+    }
+  }
+
+  const ahorro =
+    (valorUsar / 2) * (1 / valorHistorico) +
+    (valorUsar / 2) * valorVentaDeEnergia;
+  let ahorroPorYear = [];
 
   const valorCotizacion = valorDelKit + valorDelcombustible;
-
+  if (valorCotizacion > 0) {
+    for (let i = 0; i <= 25; i++) {
+      let iterar =
+        ahorroPorYear.push(valorCotizacion - ahorro);
+    }
+    console.log(ahorroPorYear);
+  }
+  comuna.sort((a, b) => a.Comuna.localeCompare(b.Comuna));
   return (
     <div>
-
       <section className="m-4 border-2 border-slate-300 p-2 text-center">
         <h1 className="titulo">Cotizacion</h1>
         <div className="contenedor">
           <section className="grid grid-cols-2">
+            <select value={comunas} onChange={handleComuna}>
+              <option value="">Selecciones una comuna</option>
+              {comuna.map((x) => {
+                return (
+                  <option value={x.Comuna} key={x.Comuna}>
+                    {x.Comuna}
+                  </option>
+                );
+              })}
+            </select>
+
             <h1>nombre de la comuna: </h1>
             <h2 className="hola">
               {
                 comuna?.find(
-                  (x) => x.Comuna?.toLowerCase() === input.comuna?.toLowerCase()
+                  (x) => x.Comuna?.toLowerCase() === comunas?.toLowerCase()
                 )?.Comuna
               }
             </h2>
@@ -210,8 +283,8 @@ const Formulario = () => {
             <h2 className="hola">
               {
                 comuna?.find(
-                  (x) => x.Comuna?.toLowerCase() === input.comuna?.toLowerCase()
-                )?.["Generación kwh kwp año"]
+                  (x) => x.Comuna?.toLowerCase() === comunas?.toLowerCase()
+                )?.["GeneraciónKwhKwpAño"]
               }
             </h2>
           </section>
@@ -220,8 +293,8 @@ const Formulario = () => {
             <h2 className="hola">
               {
                 comuna?.find(
-                  (x) => x.Comuna?.toLowerCase() === input.comuna?.toLowerCase()
-                )?.["Costo combustible mas peaje"]
+                  (x) => x.Comuna?.toLowerCase() === comunas?.toLowerCase()
+                )?.["CostoCombustibleMasPeaje"]
               }
             </h2>
           </section>
@@ -230,8 +303,8 @@ const Formulario = () => {
             <h2 className="hola">
               {
                 comuna?.find(
-                  (x) => x.Comuna?.toLowerCase() === input.comuna?.toLowerCase()
-                )?.["Valor venta energía"]
+                  (x) => x.Comuna?.toLowerCase() === comunas?.toLowerCase()
+                )?.["ValorVentaEnergía"]
               }
             </h2>
           </section>
@@ -278,24 +351,9 @@ const Formulario = () => {
       </section>
 
       <form>
-        <section className=" m-6 p-4 border-2 border-slate-400">
-          <section className="grid grid-cols-2 m-1">
-
-            <br />
-            <br />
-            <label>Nombre De La Comuna:</label>
-            <input
-              type="text"
-              name="comuna"
-              value={input.comuna}
-              onChange={handleComuna}
-              className="bg-slate-800 text-center text-slate-100 m-2"
-            />
-          </section>
-          <br />
-          
-          <section className="grid grid-cols-2 m-1">
-            <label>Consumo Del Mes:</label>
+        <section className="m-6 p-4 border-2 border-slate-400">
+          <h1 className="consumo">Consumo Mensual</h1>
+          <section className="inputs">
             <input
               type="text"
               name="consumo"
@@ -312,7 +370,7 @@ const Formulario = () => {
               className="col"
               placeholder="Febrero"
             />
-             <input
+            <input
               type="text"
               name="consumo"
               value={input.consumo3}
@@ -320,7 +378,7 @@ const Formulario = () => {
               className="col"
               placeholder="Marzo"
             />
-             <input
+            <input
               type="text"
               name="consumo"
               value={input.consumo4}
@@ -328,7 +386,7 @@ const Formulario = () => {
               className="col"
               placeholder="Abril"
             />
-             <input
+            <input
               type="text"
               name="consumo"
               value={input.consumo5}
@@ -336,7 +394,7 @@ const Formulario = () => {
               className="col"
               placeholder="Mayo"
             />
-             <input
+            <input
               type="text"
               name="consumo"
               value={input.consumo6}
@@ -344,7 +402,7 @@ const Formulario = () => {
               className="col"
               placeholder="Junio"
             />
-             <input
+            <input
               type="text"
               name="consumo"
               value={input.consumo7}
@@ -352,7 +410,7 @@ const Formulario = () => {
               className="col"
               placeholder="Julio"
             />
-             <input
+            <input
               type="text"
               name="consumo"
               value={input.consumo8}
@@ -360,7 +418,7 @@ const Formulario = () => {
               className="col"
               placeholder="Agosto"
             />
-             <input
+            <input
               type="text"
               name="consumo"
               value={input.consumo9}
@@ -368,7 +426,7 @@ const Formulario = () => {
               className="col"
               placeholder="Septiembre"
             />
-             <input
+            <input
               type="text"
               name="consumo"
               value={input.consumo10}
@@ -376,7 +434,7 @@ const Formulario = () => {
               className="col"
               placeholder="Octubre"
             />
-             <input
+            <input
               type="text"
               name="consumo"
               value={input.consumo11}
@@ -384,7 +442,7 @@ const Formulario = () => {
               className="col"
               placeholder="Noviembre"
             />
-             <input
+            <input
               type="text"
               name="consumo"
               value={input.consumo12}
@@ -392,8 +450,6 @@ const Formulario = () => {
               className="col"
               placeholder="Diciembre"
             />
-
-
           </section>
         </section>
       </form>
