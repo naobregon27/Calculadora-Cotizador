@@ -6,7 +6,7 @@ const Login = () => {
     const [password, setPassword] = useState('');
 
     const irAUrl = () => {
-        window.location.href = 'http://localhost:5000/';
+        window.location.href = 'https://calculadora-cortizador.onrender.com/';
     };
 
     const handleSubmit = (event) => {
@@ -18,7 +18,7 @@ const Login = () => {
 
         if (username === correctUsername && password === correctPassword) {
             alert('Inicio de sesión exitoso');
-            window.location.href = 'http://localhost:5000/';
+            window.location.href = 'https://calculadora-cortizador.onrender.com/';
         } else {
             alert('Nombre de usuario o contraseña incorrectos');
         }
