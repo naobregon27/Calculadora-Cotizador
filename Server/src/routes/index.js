@@ -20,4 +20,6 @@ router.post("/new-entry", createNewEntry);
 
 router.get("/delete/:id", deleteComuna);
 
+router.get("/json")
+
 export default router;

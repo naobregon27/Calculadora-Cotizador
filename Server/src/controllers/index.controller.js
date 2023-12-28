@@ -46,3 +46,5 @@ export const deleteComuna = (req, res) => {
   fs.writeFileSync("src/comunas.json", json_comuna);
   res.redirect("/");
 };
+
+

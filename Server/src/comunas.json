@@ -805,10 +805,24 @@
         "ValorVentaEnergía": "94.484"
     },
     {
-        "id": "95cf4b10-085f-441d-a41d-275afe50c35d",
-        "Comuna": "goya corrientes",
-        "GeneraciónKwhKwpAño": "1225",
-        "CostoCombustibleMasPeaje": "1124",
-        "ValorVentaEnergía": "12123"
+        "id": "cbe03bca-2ec1-47a3-876f-54644a5c537b",
+        "Comuna": "monst",
+        "GeneraciónKwhKwpAño": "2235",
+        "CostoCombustibleMasPeaje": "445",
+        "ValorVentaEnergía": "457"
+    },
+    {
+        "id": "490c6539-71de-4d9c-a0aa-a4a1dce1cf7e",
+        "Comuna": "Goya",
+        "GeneraciónKwhKwpAño": "1245",
+        "CostoCombustibleMasPeaje": "1235",
+        "ValorVentaEnergía": "1235"
+    },
+    {
+        "id": "ca542b1b-91f5-4b3a-a59a-f4c6d3fe4d63",
+        "Comuna": "colombia",
+        "GeneraciónKwhKwpAño": "1245",
+        "CostoCombustibleMasPeaje": "124",
+        "ValorVentaEnergía": "5654"
     }
 ]

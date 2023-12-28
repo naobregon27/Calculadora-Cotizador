@@ -1,8 +1,16 @@
+// import comuna from "../../../../Server/src/comunas.json";
+
 import React, { useEffect, useState } from "react";
 import comuna from "../../../../Server/src/comunas.json";
 import "./cotizador.css";
+import { Link } from 'react-router-dom'
+import Login from "../login/login";
+
+
 
 const Formulario = () => {
+
+
   const [comunas, setComunas] = useState("");
   const [input, setInput] = useState({
     consumo1: "",
@@ -17,6 +25,7 @@ const Formulario = () => {
     consumo10: "",
     consumo11: "",
     consumo12: "",
+    costeDeEnergia: "",
   });
 
   const handleComuna = (e) => {
@@ -37,6 +46,7 @@ const Formulario = () => {
       consumo10: "",
       consumo11: "",
       consumo12: "",
+      costeDeEnergia: "",
     });
   }, [comunas]);
 
@@ -124,12 +134,18 @@ const Formulario = () => {
       consumo12: e.target.value,
     });
   };
+  const handleCosteDeEnergia = (e) => {
+    setInput({
+      ...input,
+      costeDeEnergia: e.target.value,
+    });
+  };
 
   //---------------------------------------------------------------------------------------
 
   //!Valor historico
 
-  var inputValor1 = parseFloat(input.consumo1);
+  var inputValor1 = parseInt(input.consumo1);
   var inputValor2 = parseFloat(input.consumo2);
   var inputValor3 = parseFloat(input.consumo3);
   var inputValor4 = parseFloat(input.consumo4);
@@ -154,23 +170,23 @@ const Formulario = () => {
     inputValor9 +
     inputValor10 +
     inputValor11 +
-    inputValor12;
+    inputValor12 ||0;
 
   const GeneracionKwhKwpYear = comuna?.find(
-    (x) => x.comunas?.toLowerCase() === comunas?.toLowerCase()
-  )?.["Generaciónkwhkwpaño"];
+    (x) => x.Comuna?.toLowerCase() === comunas?.toLowerCase()
+  )?.["GeneraciónKwhKwpAño"]||0;
 
   const valorVentaDeEnergia = comuna?.find(
-    (x) => x.comunas?.toLowerCase() === comunas?.toLowerCase()
-  )?.["Valorventaenergía"];
-
+    (y) => y.Comuna?.toLowerCase() === comunas?.toLowerCase()
+  )?.["ValorVentaEnergía"]||0;
+  
   //! valor del kit
   const kit = {
     tres: 4237810,
     cinco: 5537483,
     diez: 10500000,
   };
-  let valorDelKit;
+  let valorDelKit=0;
   if (valorHistorico) {
     if (valorHistorico < 3 * GeneracionKwhKwpYear) {
       valorDelKit = kit.tres;
@@ -195,7 +211,7 @@ const Formulario = () => {
     tresmil: 1450400,
   };
 
-  let valorDelcombustible;
+  let valorDelcombustible=0;
   if (valorHistorico) {
     if (valorHistorico < 3 * GeneracionKwhKwpYear) {
       valorDelcombustible = combustible.mil;
@@ -239,121 +255,89 @@ const Formulario = () => {
   }
 
   const ahorro =
-    (valorUsar / 2) * (1 / valorHistorico) +
-    (valorUsar / 2) * valorVentaDeEnergia;
+    ((valorUsar / 2) * (parseFloat(input.costeDeEnergia) / valorHistorico) +
+      valorUsar / 2) *
+    parseFloat(valorVentaDeEnergia);
+
+
   let ahorroPorYear = [];
 
   const valorCotizacion = valorDelKit + valorDelcombustible;
-  if (valorCotizacion > 0) {
-    for (let i = 0; i <= 25; i++) {
-      let iterar =
-        ahorroPorYear.push(valorCotizacion - ahorro);
+  let itera = valorCotizacion;
+  if (valorCotizacion) {
+    for (let i = 0; i <= 24; i++) {
+      if (i >= 1 && i <= 24) {
+        itera = itera - ahorro;
+      }
+      ahorroPorYear.push(itera.toFixed(2));
     }
-    console.log(ahorroPorYear);
+    ;
   }
   comuna.sort((a, b) => a.Comuna.localeCompare(b.Comuna));
+
+  const precios = {
+    tres: { paneles: 6, inversor: "Inversor OnGrid 3kw", canalizacion: 20 },
+    cinco: { paneles: 10, inversor: "Inversor OnGrid 5kw", canalizacion: 20 },
+    diez: { paneles: 20, inversor: "Inversor OnGrid 10kw", canalizacion: 40 },
+  };
+  let incluye;
+  if (valorHistorico) {
+    if (valorHistorico < 3 * GeneracionKwhKwpYear) {
+      incluye = precios.tres;
+    }
+    if (
+      valorHistorico > 3 * GeneracionKwhKwpYear &&
+      valorHistorico < 5 * GeneracionKwhKwpYear
+    ) {
+      incluye = precios.cinco;
+    }
+    if (
+      valorHistorico > 5 * GeneracionKwhKwpYear &&
+      valorHistorico < 10 * GeneracionKwhKwpYear
+    ) {
+      incluye = precios.diez;
+    }
+  }
+
+  const [valor, setValor] = useState('');
+
+  const cambiarValor = (e) => {
+    let valor = e.target.value;
+    valor = parseFloat(valor);
+
+    if (isNaN(valor)) {
+      valor = ''; // Reemplaza NaN con una cadena vacía
+    }
+
+    setValor(valor);
+  };
+ 
+
   return (
-    <div>
-      <section className="m-4 border-2 border-slate-300 p-2 text-center">
-        <h1 className="titulo">Cotizacion</h1>
-        <div className="contenedor">
-          <section className="grid grid-cols-2">
-            <select value={comunas} onChange={handleComuna}>
-              <option value="">Selecciones una comuna</option>
-              {comuna.map((x) => {
-                return (
-                  <option value={x.Comuna} key={x.Comuna}>
-                    {x.Comuna}
-                  </option>
-                );
-              })}
-            </select>
+    <div class="conteiner p-4">
+      <h1 className="titulo">Cotizador</h1>
+{/*      
+      <Link to="/login" class="btn btn-primary"><buttom className= "Boton">Administrador</buttom></Link> */}
 
-            <h1>nombre de la comuna: </h1>
-            <h2 className="hola">
-              {
-                comuna?.find(
-                  (x) => x.Comuna?.toLowerCase() === comunas?.toLowerCase()
-                )?.Comuna
-              }
-            </h2>
-          </section>
-          <section className="grid grid-cols-2">
-            <h1>Generación kwh kwp año: </h1>
-            <h2 className="hola">
-              {
-                comuna?.find(
-                  (x) => x.Comuna?.toLowerCase() === comunas?.toLowerCase()
-                )?.["GeneraciónKwhKwpAño"]
-              }
-            </h2>
-          </section>
-          <section className="grid grid-cols-2">
-            <h1>Costo combustible mas peaje: </h1>
-            <h2 className="hola">
-              {
-                comuna?.find(
-                  (x) => x.Comuna?.toLowerCase() === comunas?.toLowerCase()
-                )?.["CostoCombustibleMasPeaje"]
-              }
-            </h2>
-          </section>
-          <section className="grid grid-cols-2">
-            <h1>Valor venta energía: </h1>
-            <h2 className="hola">
-              {
-                comuna?.find(
-                  (x) => x.Comuna?.toLowerCase() === comunas?.toLowerCase()
-                )?.["ValorVentaEnergía"]
-              }
-            </h2>
-          </section>
-          <section className="grid grid-cols-2">
-            <h1>Valor Historio: </h1>
-            <h2 className="hola">
-              {Intl.NumberFormat("es-IN").format(valorHistorico)}
-            </h2>
-          </section>
-          <section className="grid grid-cols-2">
-            <h1>Valor Kit: </h1>
-            <h2 className="hola">
-              {Intl.NumberFormat("en-US", {
-                style: "currency",
-                currency: "USD",
-                minimumFractionDigits: 2,
-                maximumFractionDigits: 2,
-              }).format(valorDelKit)}
-            </h2>
-          </section>
-          <section className="grid grid-cols-2">
-            <h1>Valor combustible: </h1>
-            <h2 className="hola">
-              {Intl.NumberFormat("en-US", {
-                style: "currency",
-                currency: "USD",
-                minimumFractionDigits: 2,
-                maximumFractionDigits: 2,
-              }).format(valorDelcombustible)}
-            </h2>
-          </section>
-          <section className="grid grid-cols-2">
-            <h1>Valo Cotizacion: </h1>
-            <h2 className="hola">
-              {Intl.NumberFormat("en-US", {
-                style: "currency",
-                currency: "USD",
-                minimumFractionDigits: 2,
-                maximumFractionDigits: 2,
-              }).format(valorCotizacion)}
-            </h2>
-          </section>
-        </div>
-      </section>
+      <div class="col-md-4 mx-auto">
 
-      <form>
-        <section className="m-6 p-4 border-2 border-slate-400">
-          <h1 className="consumo">Consumo Mensual</h1>
-          <section className="inputs">
+        <form class="card bg-dark text-light card-body">
+          <h3>Comuna</h3>
+
+          <select value={comunas} onChange={handleComuna}>
+            
+            <option value="">Selecciones una comuna</option>
+            {comuna.map((x) => {
+              return (
+                <option value={x.Comuna} key={x.Comuna}>
+                  {x.Comuna}
+                </option>
+              );
+            })}
+          </select>
+          <div class="mb-3">
+            <h3 className="consumo">Consumo Mensuales</h3>
+
             <input
               type="text"
               name="consumo"
@@ -450,10 +434,151 @@ const Formulario = () => {
               className="col"
               placeholder="Diciembre"
             />
+          </div>
+
+
+
+
+          <h3>Coste De Energia</h3>
+          <input
+            type="text"
+            name="consumo"
+            value={input.costeDeEnergia}
+            onChange={handleCosteDeEnergia}
+            className="col"
+            placeholder="Coste De Enegia"
+          />
+
+        </form>
+      </div>
+
+
+      <div class="row">
+
+
+
+        <h4 class="col-sm-4">Nombre de la comuna: </h4>
+        <h4 class="col-sm-8">
+          {
+            comuna?.find(
+              (x) => x.Comuna?.toLowerCase() === comunas?.toLowerCase()
+            )?.Comuna
+          }
+        </h4>
+
+
+        <h4 class="col-sm-4">Generación kwh kwp año: </h4>
+        <h4 class="col-sm-8">
+          {
+            comuna?.find(
+              (x) => x.Comuna?.toLowerCase() === comunas?.toLowerCase()
+            )?.["GeneraciónKwhKwpAño"]
+          }
+        </h4>
+
+
+        <h4 class="col-sm-4">Costo de combustible mas peaje: </h4>
+        <h4 class="col-sm-8">
+          {
+            comuna?.find(
+              (x) => x.Comuna?.toLowerCase() === comunas?.toLowerCase()
+            )?.["CostoCombustibleMasPeaje"]
+          }{valor}
+        </h4>
+
+
+        <h4 class="col-sm-4">Valor de venta energía: </h4>
+        <h4 class="col-sm-8">
+          {
+            comuna?.find(
+              (x) => x.Comuna?.toLowerCase() === comunas?.toLowerCase()
+            )?.["ValorVentaEnergía"]
+          }
+        </h4>
+
+
+        <h4 class="col-sm-4">Valor Historico: </h4>
+        <h4 class="col-sm-8">
+          {Intl.NumberFormat().format(valorHistorico)}
+        </h4>
+
+
+        <h4 class="col-sm-4">Valor Kit: </h4>
+        <h4 class="col-sm-8">
+          {Intl.NumberFormat().format(valorDelKit)}
+        </h4>
+
+
+        <h4 class="col-sm-4">Valor de combustible: </h4>
+        <h4 class="col-sm-8">
+          {Intl.NumberFormat("en-US", {
+            style: "currency",
+            currency: "USD",
+            minimumFractionDigits: 2,
+            maximumFractionDigits: 2,
+          }).format(valorDelcombustible)}
+        </h4>
+
+
+        <h4 class="col-sm-4">Valor de Cotizacion: </h4>
+        <h4 class="col-sm-8">
+          {Intl.NumberFormat("en-US", {
+            style: "currency",
+            currency: "USD",
+            minimumFractionDigits: 2,
+            maximumFractionDigits: 2,
+          }).format(valorCotizacion)}
+        </h4>
+
+
+      </div>
+
+
+
+      {ahorroPorYear?.map((x, y) => {
+        return (
+          <table class="table table-dark table-striped" key={y + 1}>
+            <thead>
+              <tr>
+                <th scope="col"><h5>Años</h5></th>
+                <th scope="col"><h5>Inversion</h5></th>
+                <th scope="col"><h5>Ahorro</h5></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td scope="row">{y + 1}</td>
+                <td>{x}</td>
+                <td>{ahorro}</td>
+              </tr>
+            </tbody>
+          </table>
+        )
+      })}
+
+
+      {
+        valorHistorico > 0 && (
+
+          <section>
+            <h2>La solución fotovoltaica incluye : </h2>
+            <ul>
+              <li>{incluye?.paneles} paneles solares</li>
+              <li>{incluye?.inversor}</li>
+              <li>{incluye?.canalizacion} metros de canalizacion</li>
+              <li>Instalación coplanar/ajustable en techo</li>
+              <li>Getión con la distribuidora </li>
+              <li>Cambio de medidor</li>
+            </ul>
           </section>
-        </section>
-      </form>
-    </div>
+        )
+      }
+
+
+
+
+
+    </div >
   );
 };
 

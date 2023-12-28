@@ -1,7 +1,25 @@
 .contenedor{
-    border: 5px inset #ff6550;
+    border-radius: 43px 43px 43px 43px;
+-webkit-border-radius: 43px 43px 43px 43px;
+-moz-border-radius: 43px 43px 43px 43px;
 }
 
 .col{
     padding: auto;
+}
+
+.row{
+    border-radius: 23px 23px 23px 23px;
+    -webkit-border-radius: 23px 23px 23px 23px;
+    -moz-border-radius: 23px 23px 23px 23px;
+    background-color:rgb(32, 31, 31);
+    color:azure;
+}
+
+.col-sm-8{
+    color: #d12812;
+}
+
+.ahorro{
+    border: 5px inset #ff6550;
 }
