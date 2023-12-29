@@ -1,25 +1,64 @@
-.contenedor{
+.contenedor {
     border-radius: 43px 43px 43px 43px;
--webkit-border-radius: 43px 43px 43px 43px;
--moz-border-radius: 43px 43px 43px 43px;
+    -webkit-border-radius: 43px 43px 43px 43px;
+    -moz-border-radius: 43px 43px 43px 43px;
 }
 
-.col{
+.col {
     padding: auto;
 }
 
-.row{
+.row {
     border-radius: 23px 23px 23px 23px;
     -webkit-border-radius: 23px 23px 23px 23px;
     -moz-border-radius: 23px 23px 23px 23px;
-    background-color:rgb(32, 31, 31);
-    color:azure;
+    background: linear-gradient(to right, rgb(80, 164, 75), rgb(64, 168, 111));
+    color: azure;
 }
 
-.col-sm-8{
+.col-sm-8 {
     color: #d12812;
 }
 
-.ahorro{
+.ahorro {
     border: 5px inset #ff6550;
+}
+
+.titulo {
+
+    text-align: center;
+    text-shadow: 0px 4px 13px rgba(0,0,0,0.6);
+    color: rgb(48, 55, 55);
+    
+}
+
+.card {
+    background-color: aquamarine;
+}
+
+.fondo {
+    background-image: url("../../../public/portada-calculadora-de-vacaciones.jpg");
+    background-size: cover;
+    /* Ajusta la imagen para cubrir todo el div */
+    background-position: center;
+    /* Centra la imagen en el div */
+    padding: 7%;
+    border-radius: 50px 50px 50px 50px;
+    -webkit-border-radius: 50px 50px 50px 50px;
+    -moz-border-radius: 50px 50px 50px 50px;
+    box-shadow: -1px 17px 5px 0px rgba(0, 0, 0, 0.75);
+    -webkit-box-shadow: -1px 17px 5px 0px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: -1px 17px 5px 0px rgba(0, 0, 0, 0.75);
+}
+
+.parrafo{
+    font-size:larger;
+    text-align:justify;
+    background-color: #d5d3d3;
+    line-height: 1.5;
+    border-radius: 10px 10px 10px 10px;
+    -webkit-border-radius: 10px 10px 10px 10px;
+    -moz-border-radius: 10px 10px 10px 10px;
+    margin: 10px 0;
+    padding: 10px;
 }

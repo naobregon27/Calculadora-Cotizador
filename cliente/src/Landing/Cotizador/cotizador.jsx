@@ -3,12 +3,27 @@
 import React, { useEffect, useState } from "react";
 import comuna from "../../../../Server/src/comunas.json";
 import "./cotizador.css";
+
+
 import { Link } from 'react-router-dom'
 import Login from "../login/login";
 
+// function listaDeComunas(){
 
+//   const [data, setData] = useState()
+
+//   useEffect(() => {
+//     fetch("../../../../Server/src/comunas.json")
+//       .then((response) => response.json())
+//       .then((data) => {setData(data)})
+//       .catch(error => console.error('Error:', error));
+//   }, [])
+// return data
+// }
 
 const Formulario = () => {
+
+  // const comuna = listaDeComunas()
 
 
   const [comunas, setComunas] = useState("");
@@ -170,23 +185,23 @@ const Formulario = () => {
     inputValor9 +
     inputValor10 +
     inputValor11 +
-    inputValor12 ||0;
+    inputValor12 || 0;
 
   const GeneracionKwhKwpYear = comuna?.find(
     (x) => x.Comuna?.toLowerCase() === comunas?.toLowerCase()
-  )?.["GeneraciónKwhKwpAño"]||0;
+  )?.["GeneraciónKwhKwpAño"] || 0;
 
   const valorVentaDeEnergia = comuna?.find(
     (y) => y.Comuna?.toLowerCase() === comunas?.toLowerCase()
-  )?.["ValorVentaEnergía"]||0;
-  
+  )?.["ValorVentaEnergía"] || 0;
+
   //! valor del kit
   const kit = {
     tres: 4237810,
     cinco: 5537483,
     diez: 10500000,
   };
-  let valorDelKit=0;
+  let valorDelKit = 0;
   if (valorHistorico) {
     if (valorHistorico < 3 * GeneracionKwhKwpYear) {
       valorDelKit = kit.tres;
@@ -211,7 +226,7 @@ const Formulario = () => {
     tresmil: 1450400,
   };
 
-  let valorDelcombustible=0;
+  let valorDelcombustible = 0;
   if (valorHistorico) {
     if (valorHistorico < 3 * GeneracionKwhKwpYear) {
       valorDelcombustible = combustible.mil;
@@ -311,23 +326,38 @@ const Formulario = () => {
 
     setValor(valor);
   };
- 
+
+  
+
 
   return (
     <div class="conteiner p-4">
-      <h1 className="titulo">Cotizador</h1>
-{/*      
-      <Link to="/login" class="btn btn-primary"><buttom className= "Boton">Administrador</buttom></Link> */}
+      <div className="fondo">
+             
+      <a class="btn btn-success" href="https://ochoaim.cl/"><buttom className= "Boton">Web principal</buttom></a>
+        <h1 className="titulo">Cotizador</h1>
+      </div>
+      <br />
+      <br />
+      <div>
+        <p className="parrafo">
+           Seleccione su comuna eh ingrese el valor de su consumo mensual de los ultimos 12 en kWh luego ingrese el costo de energia. Tenga en cuenta que este se encuentra en su factura de consumo de luz, ya que esto generara un serie de calculos en donde, visualizara su valor de cotizacion continuado de una tabla en donde vera el ahorro energetico.
+
+        </p>
+      </div>
+      <br />
+      
+      
 
       <div class="col-md-4 mx-auto">
 
-        <form class="card bg-dark text-light card-body">
+        <form class="card bg-success bg-gradient text-light card-body" >
           <h3>Comuna</h3>
 
           <select value={comunas} onChange={handleComuna}>
-            
+
             <option value="">Selecciones una comuna</option>
-            {comuna.map((x) => {
+            {comuna?.map((x) => {
               return (
                 <option value={x.Comuna} key={x.Comuna}>
                   {x.Comuna}
@@ -446,10 +476,12 @@ const Formulario = () => {
             value={input.costeDeEnergia}
             onChange={handleCosteDeEnergia}
             className="col"
-            placeholder="Coste De Enegia"
+            placeholder="Coste De Energia"
           />
 
         </form>
+        <br />
+        <br />
       </div>
 
 
@@ -533,11 +565,13 @@ const Formulario = () => {
 
       </div>
 
+      <br />
+
 
 
       {ahorroPorYear?.map((x, y) => {
         return (
-          <table class="table table-dark table-striped" key={y + 1}>
+          <table class="table table-success  table-striped" key={y + 1}>
             <thead>
               <tr>
                 <th scope="col"><h5>Años</h5></th>

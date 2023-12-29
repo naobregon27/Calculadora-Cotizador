@@ -31,7 +31,7 @@ const Login = () => {
                 <div class="col-md-4 mx-auto">
                     <h1 class="mb-3">Bienvenido</h1>
 
-                    <form onSubmit={handleSubmit} class="card bg-dark text-light card-body">
+                    <form onSubmit={handleSubmit} class="card bg-success bg-gradient text-light card-body">
                         <div class="mb-3">
                             <label>
                                 <h5>Nombre de usuario:</h5>
