@@ -1,0 +1,807 @@
+[
+    {
+        "id": "d8e60898-13dd-4bb1-ab2b-2096b7abeac5",
+        "Comuna": "Cauquenes",
+        "GeneraciónKwhKwpAño": "1643",
+        "CostoCombustibleMasPeaje": "41900",
+        "ValorVentaEnergía": "102.976"
+    },
+    {
+        "id": "3e29a81c-0a5e-495e-8c14-d3513da6ac60",
+        "Comuna": "Chanco",
+        "GeneraciónKwhKwpAño": "1640",
+        "CostoCombustibleMasPeaje": "207200",
+        "ValorVentaEnergía": "102.976"
+    },
+    {
+        "id": "316fd9bf-3b74-45c1-83c6-d34f8a94aa45",
+        "Comuna": "Colbun",
+        "GeneraciónKwhKwpAño": "1538",
+        "CostoCombustibleMasPeaje": "70880",
+        "ValorVentaEnergía": "68.322"
+    },
+    {
+        "id": "67261c8b-3026-48f4-bc56-c45d2b71c7aa",
+        "Comuna": "Constitucion",
+        "GeneraciónKwhKwpAño": "1613",
+        "CostoCombustibleMasPeaje": "89220",
+        "ValorVentaEnergía": "96.785"
+    },
+    {
+        "id": "a7a94fdd-a8ab-4da3-a29e-5bad10ed44af",
+        "Comuna": "Curepto",
+        "GeneraciónKwhKwpAño": "1632",
+        "CostoCombustibleMasPeaje": "90900",
+        "ValorVentaEnergía": "102.976"
+    },
+    {
+        "id": "978e4e7e-9d66-4fa8-aa5c-de309639ff95",
+        "Comuna": "Curico",
+        "GeneraciónKwhKwpAño": "1557",
+        "CostoCombustibleMasPeaje": "94080",
+        "ValorVentaEnergía": "102.976"
+    },
+    {
+        "id": "ef8d5e83-8ddd-4def-bd3b-1b86912a9ff7",
+        "Comuna": "Empedrado",
+        "GeneraciónKwhKwpAño": "1672",
+        "CostoCombustibleMasPeaje": "88340",
+        "ValorVentaEnergía": "102.976"
+    },
+    {
+        "id": "81669910-fd15-4d31-adf6-aa2db06dfa1d",
+        "Comuna": "Hualañe",
+        "GeneraciónKwhKwpAño": "1636",
+        "CostoCombustibleMasPeaje": "89580",
+        "ValorVentaEnergía": "102.976"
+    },
+    {
+        "id": "224e4b77-00aa-45fe-b311-80fc55d198f8",
+        "Comuna": "Licanten",
+        "GeneraciónKwhKwpAño": "1627",
+        "CostoCombustibleMasPeaje": "93760",
+        "ValorVentaEnergía": "102.976"
+    },
+    {
+        "id": "f0bf86e5-1186-465a-ab4a-8f3cbfd73694",
+        "Comuna": "Linares",
+        "GeneraciónKwhKwpAño": "1535",
+        "CostoCombustibleMasPeaje": "64500",
+        "ValorVentaEnergía": "102.976"
+    },
+    {
+        "id": "2319b9b2-7f63-42ff-b5fa-447506807200",
+        "Comuna": "Longavi",
+        "GeneraciónKwhKwpAño": "1552",
+        "CostoCombustibleMasPeaje": "60540",
+        "ValorVentaEnergía": "102.976"
+    },
+    {
+        "id": "0b7f09f6-407c-4020-b93b-5fc2bdd25f3a",
+        "Comuna": "Maule",
+        "GeneraciónKwhKwpAño": "1586",
+        "CostoCombustibleMasPeaje": "80120",
+        "ValorVentaEnergía": "102.976"
+    },
+    {
+        "id": "cb9b7884-f02a-432f-b203-2cb586d71c05",
+        "Comuna": "Molina",
+        "GeneraciónKwhKwpAño": "1586",
+        "CostoCombustibleMasPeaje": "93260",
+        "ValorVentaEnergía": "102.976"
+    },
+    {
+        "id": "9117da22-9bee-46c3-8300-2871dbb38c6b",
+        "Comuna": "Parral",
+        "GeneraciónKwhKwpAño": "1568",
+        "CostoCombustibleMasPeaje": "50540",
+        "ValorVentaEnergía": "102.976"
+    },
+    {
+        "id": "b02cd0f5-fa55-40db-8e58-825d7cd33c36",
+        "Comuna": "Pelarco",
+        "GeneraciónKwhKwpAño": "1548",
+        "CostoCombustibleMasPeaje": "79680",
+        "ValorVentaEnergía": "102.976"
+    },
+    {
+        "id": "312e99d3-3a32-4e83-97da-31dd9906a153",
+        "Comuna": "Pelluhue",
+        "GeneraciónKwhKwpAño": "1611",
+        "CostoCombustibleMasPeaje": "50260",
+        "ValorVentaEnergía": "102.976"
+    },
+    {
+        "id": "b7bbc8bd-a37d-4baa-9e4e-26c3fa9180db",
+        "Comuna": "Pencahue",
+        "GeneraciónKwhKwpAño": "1602",
+        "CostoCombustibleMasPeaje": "78360",
+        "ValorVentaEnergía": "102.976"
+    },
+    {
+        "id": "845e8bd1-969e-4307-9d5a-e4093f7717d4",
+        "Comuna": "Rauco",
+        "GeneraciónKwhKwpAño": "1567",
+        "CostoCombustibleMasPeaje": "96500",
+        "ValorVentaEnergía": "102.976"
+    },
+    {
+        "id": "b1b2f2ea-d5cb-42b6-afb5-3631618148ed",
+        "Comuna": "Retiro",
+        "GeneraciónKwhKwpAño": "1569",
+        "CostoCombustibleMasPeaje": "52300",
+        "ValorVentaEnergía": "102.976"
+    },
+    {
+        "id": "64311664-353a-416f-8aad-addfa661b659",
+        "Comuna": "Rio Claro",
+        "GeneraciónKwhKwpAño": "1546",
+        "CostoCombustibleMasPeaje": "314780",
+        "ValorVentaEnergía": "102.976"
+    },
+    {
+        "id": "062a8fda-a0bd-46f5-88f5-a6ccf7fbae71",
+        "Comuna": "Romeral",
+        "GeneraciónKwhKwpAño": "1576",
+        "CostoCombustibleMasPeaje": "96060",
+        "ValorVentaEnergía": "102.976"
+    },
+    {
+        "id": "494bb6f4-40ad-40da-bed9-5bad30b2126b",
+        "Comuna": "Sagrada Familia",
+        "GeneraciónKwhKwpAño": "1598",
+        "CostoCombustibleMasPeaje": "96340",
+        "ValorVentaEnergía": "102.976"
+    },
+    {
+        "id": "c099c397-e024-463c-91f5-cd35384f8ed4",
+        "Comuna": "San Clemente",
+        "GeneraciónKwhKwpAño": "1545",
+        "CostoCombustibleMasPeaje": "78800",
+        "ValorVentaEnergía": "92.362"
+    },
+    {
+        "id": "c951cd53-7531-4b5f-b64e-654d24bd957d",
+        "Comuna": "San Javier",
+        "GeneraciónKwhKwpAño": "1575",
+        "CostoCombustibleMasPeaje": "70880",
+        "ValorVentaEnergía": "102.976"
+    },
+    {
+        "id": "bffed4ea-df5a-476f-b69d-445cdd87cec0",
+        "Comuna": "San Rafael",
+        "GeneraciónKwhKwpAño": "1578",
+        "CostoCombustibleMasPeaje": "69560",
+        "ValorVentaEnergía": "102.976"
+    },
+    {
+        "id": "48e34d52-c4fe-48ea-837f-1d57d132cf9a",
+        "Comuna": "Talca",
+        "GeneraciónKwhKwpAño": "1578",
+        "CostoCombustibleMasPeaje": "75280",
+        "ValorVentaEnergía": "102.976"
+    },
+    {
+        "id": "287b9523-6508-4457-8b69-78450d5be98e",
+        "Comuna": "Teno",
+        "GeneraciónKwhKwpAño": "1582",
+        "CostoCombustibleMasPeaje": "97820",
+        "ValorVentaEnergía": "96.785"
+    },
+    {
+        "id": "24c2364d-cd21-45db-a20d-99e5651e6182",
+        "Comuna": "Vichuquén",
+        "GeneraciónKwhKwpAño": "1622",
+        "CostoCombustibleMasPeaje": "97060",
+        "ValorVentaEnergía": "102.976"
+    },
+    {
+        "id": "c86e3124-585b-47f9-9d5e-55a246932eaf",
+        "Comuna": "Villa Alegre",
+        "GeneraciónKwhKwpAño": "1577",
+        "CostoCombustibleMasPeaje": "69120",
+        "ValorVentaEnergía": "102.976"
+    },
+    {
+        "id": "eaf7dca7-17f0-48c5-a288-0e18de34fb07",
+        "Comuna": "Yerbas Buenas",
+        "GeneraciónKwhKwpAño": "1546",
+        "CostoCombustibleMasPeaje": "68020",
+        "ValorVentaEnergía": "96.785"
+    },
+    {
+        "id": "52724398-ecc5-4d5d-9eab-068a19fc806c",
+        "Comuna": "Bulnes",
+        "GeneraciónKwhKwpAño": "1577",
+        "CostoCombustibleMasPeaje": "37860",
+        "ValorVentaEnergía": "90.142"
+    },
+    {
+        "id": "2ccc73f9-d158-43de-a868-dc8ecc1874a4",
+        "Comuna": "Chillan",
+        "GeneraciónKwhKwpAño": "1559",
+        "CostoCombustibleMasPeaje": "37860",
+        "ValorVentaEnergía": "102.976"
+    },
+    {
+        "id": "3275da3c-6ab0-4aeb-bcff-b0d63aa79e32",
+        "Comuna": "Chillan Viejo",
+        "GeneraciónKwhKwpAño": "1559",
+        "CostoCombustibleMasPeaje": "37860",
+        "ValorVentaEnergía": "102.976"
+    },
+    {
+        "id": "728e520f-47ff-4aae-8efc-ea3ce2a6a681",
+        "Comuna": "Cobquecura",
+        "GeneraciónKwhKwpAño": "1619",
+        "CostoCombustibleMasPeaje": "37940",
+        "ValorVentaEnergía": "82.644"
+    },
+    {
+        "id": "0d857b39-d7ac-4f8a-b775-39a8c9e107bb",
+        "Comuna": "Coelemu",
+        "GeneraciónKwhKwpAño": "1595",
+        "CostoCombustibleMasPeaje": "24080",
+        "ValorVentaEnergía": "89.357"
+    },
+    {
+        "id": "6788b294-b524-434b-be2f-6d1fb4a39fb9",
+        "Comuna": "Coihueco",
+        "GeneraciónKwhKwpAño": "1573",
+        "CostoCombustibleMasPeaje": "43280",
+        "ValorVentaEnergía": "90.109"
+    },
+    {
+        "id": "6dd6cf7b-e081-4812-a8fb-85f35496d23a",
+        "Comuna": "El Carmen",
+        "GeneraciónKwhKwpAño": "1563",
+        "CostoCombustibleMasPeaje": "35860",
+        "ValorVentaEnergía": "90.322"
+    },
+    {
+        "id": "1296687c-45dc-4b76-b622-6dae6c9773e7",
+        "Comuna": "Ninhue",
+        "GeneraciónKwhKwpAño": "1607",
+        "CostoCombustibleMasPeaje": "35520",
+        "ValorVentaEnergía": "89.234"
+    },
+    {
+        "id": "3d8d972e-5a97-4a09-8bad-d3727613f32c",
+        "Comuna": "Ñiquen",
+        "GeneraciónKwhKwpAño": "1601",
+        "CostoCombustibleMasPeaje": "49000",
+        "ValorVentaEnergía": "102.976"
+    },
+    {
+        "id": "87d1892a-686d-4a10-a86d-7451be12c681",
+        "Comuna": "Pemuco",
+        "GeneraciónKwhKwpAño": "1566",
+        "CostoCombustibleMasPeaje": "32560",
+        "ValorVentaEnergía": "89.956"
+    },
+    {
+        "id": "93d4969d-8d04-4f09-a65a-c101224c0420",
+        "Comuna": "Pinto",
+        "GeneraciónKwhKwpAño": "1589",
+        "CostoCombustibleMasPeaje": "42700",
+        "ValorVentaEnergía": "88.91"
+    },
+    {
+        "id": "8ae44520-2ca5-4ce5-a25f-870b37e91b6f",
+        "Comuna": "Portezuelo",
+        "GeneraciónKwhKwpAño": "1606",
+        "CostoCombustibleMasPeaje": "26420",
+        "ValorVentaEnergía": "89.443"
+    },
+    {
+        "id": "ea26755b-f2b4-4842-8397-0ff71743861b",
+        "Comuna": "Quillon",
+        "GeneraciónKwhKwpAño": "1575",
+        "CostoCombustibleMasPeaje": "31400",
+        "ValorVentaEnergía": "89.763"
+    },
+    {
+        "id": "0a6bb8ea-fa4b-4bd3-8117-ab8cdbe94bce",
+        "Comuna": "Quirihue",
+        "GeneraciónKwhKwpAño": "1646",
+        "CostoCombustibleMasPeaje": "31120",
+        "ValorVentaEnergía": "90.204"
+    },
+    {
+        "id": "83ce208c-0f60-41b8-b1f3-7d569d0d333e",
+        "Comuna": "Ranquil",
+        "GeneraciónKwhKwpAño": "1564",
+        "CostoCombustibleMasPeaje": "34920",
+        "ValorVentaEnergía": "80.976"
+    },
+    {
+        "id": "f0488b0b-acca-4a12-a847-9f8615cd3d29",
+        "Comuna": "San Carlos",
+        "GeneraciónKwhKwpAño": "1578",
+        "CostoCombustibleMasPeaje": "43140",
+        "ValorVentaEnergía": "89.864"
+    },
+    {
+        "id": "705d7969-ff1c-483c-bbd5-cf4444c55d12",
+        "Comuna": "San Fabian",
+        "GeneraciónKwhKwpAño": "1566",
+        "CostoCombustibleMasPeaje": "59420",
+        "ValorVentaEnergía": "89.236"
+    },
+    {
+        "id": "c73e8817-5161-42f2-a43c-73b9ede01e37",
+        "Comuna": "San Ignacio",
+        "GeneraciónKwhKwpAño": "1579",
+        "CostoCombustibleMasPeaje": "44020",
+        "ValorVentaEnergía": "90.126"
+    },
+    {
+        "id": "35d76fbc-fb5a-421b-ae2e-ab2ee3c961a2",
+        "Comuna": "San Nicolas",
+        "GeneraciónKwhKwpAño": "1592",
+        "CostoCombustibleMasPeaje": "41300",
+        "ValorVentaEnergía": "90.099"
+    },
+    {
+        "id": "7546bd52-0492-427f-961c-0908ea3f54ca",
+        "Comuna": "Treguaco",
+        "GeneraciónKwhKwpAño": "1617",
+        "CostoCombustibleMasPeaje": "27380",
+        "ValorVentaEnergía": "89.333"
+    },
+    {
+        "id": "2dac35d0-815c-41d8-9633-2429de5aab23",
+        "Comuna": "Yungay",
+        "GeneraciónKwhKwpAño": "1568",
+        "CostoCombustibleMasPeaje": "33900",
+        "ValorVentaEnergía": "88.804"
+    },
+    {
+        "id": "019edb4c-3aff-4afa-a89e-cb1a0da3ab72",
+        "Comuna": "Alto Bío Bío",
+        "GeneraciónKwhKwpAño": "1460",
+        "CostoCombustibleMasPeaje": "26420",
+        "ValorVentaEnergía": "42.973"
+    },
+    {
+        "id": "eec792ee-813e-4acb-a646-7906ee696b67",
+        "Comuna": "Antuco",
+        "GeneraciónKwhKwpAño": "1536",
+        "CostoCombustibleMasPeaje": "46660",
+        "ValorVentaEnergía": "60.366"
+    },
+    {
+        "id": "bfb5000a-d137-464d-a4d8-1aa6fe2c0b78",
+        "Comuna": "Arauco",
+        "GeneraciónKwhKwpAño": "1529",
+        "CostoCombustibleMasPeaje": "19100",
+        "ValorVentaEnergía": "88.804"
+    },
+    {
+        "id": "7aa774e3-54a0-47e4-830b-3fa90c988c17",
+        "Comuna": "Cabrero",
+        "GeneraciónKwhKwpAño": "1552",
+        "CostoCombustibleMasPeaje": "24200",
+        "ValorVentaEnergía": "84.745"
+    },
+    {
+        "id": "3fdac209-0706-4b20-afb3-b9e331947f96",
+        "Comuna": "Cañete",
+        "GeneraciónKwhKwpAño": "1471",
+        "CostoCombustibleMasPeaje": "34380",
+        "ValorVentaEnergía": "94.484"
+    },
+    {
+        "id": "ca767e92-5b09-4254-be02-a4121ea99a7b",
+        "Comuna": "Chiguayante",
+        "GeneraciónKwhKwpAño": "1526",
+        "CostoCombustibleMasPeaje": "3300",
+        "ValorVentaEnergía": "102.976"
+    },
+    {
+        "id": "b1e4c28b-3e82-45bd-bb6c-815047c00a47",
+        "Comuna": "Concepcion",
+        "GeneraciónKwhKwpAño": "1555",
+        "CostoCombustibleMasPeaje": "26420",
+        "ValorVentaEnergía": "102.976"
+    },
+    {
+        "id": "520db660-5f59-45c0-b474-02fc1b9bff59",
+        "Comuna": "Contulmo",
+        "GeneraciónKwhKwpAño": "1406",
+        "CostoCombustibleMasPeaje": "42080",
+        "ValorVentaEnergía": "94.484"
+    },
+    {
+        "id": "ade435ed-16c5-4084-9fe2-1cb642ca669c",
+        "Comuna": "Coronel",
+        "GeneraciónKwhKwpAño": "1564",
+        "CostoCombustibleMasPeaje": "4840",
+        "ValorVentaEnergía": "70.815"
+    },
+    {
+        "id": "6e7e3fc3-6b2d-46d0-9991-c82c673ff361",
+        "Comuna": "Curanilahue",
+        "GeneraciónKwhKwpAño": "1476",
+        "CostoCombustibleMasPeaje": "23940",
+        "ValorVentaEnergía": "87.437"
+    },
+    {
+        "id": "a203a5c1-f495-4cf7-93ba-48e8c0031c6e",
+        "Comuna": "Florida",
+        "GeneraciónKwhKwpAño": "1590",
+        "CostoCombustibleMasPeaje": "26120",
+        "ValorVentaEnergía": "94.484"
+    },
+    {
+        "id": "c5142f18-fafe-40cd-a113-6e909218d44a",
+        "Comuna": "Hualpen",
+        "GeneraciónKwhKwpAño": "1579",
+        "CostoCombustibleMasPeaje": "26420",
+        "ValorVentaEnergía": "102.976"
+    },
+    {
+        "id": "028fac18-fe8e-4e8b-af94-8dedca83748b",
+        "Comuna": "Hualqui",
+        "GeneraciónKwhKwpAño": "1509",
+        "CostoCombustibleMasPeaje": "5720",
+        "ValorVentaEnergía": "87.437"
+    },
+    {
+        "id": "1735ae4e-59c9-4f21-b0b8-cabf06540c20",
+        "Comuna": "Laja",
+        "GeneraciónKwhKwpAño": "1549",
+        "CostoCombustibleMasPeaje": "35860",
+        "ValorVentaEnergía": "88.804"
+    },
+    {
+        "id": "fd8a6fba-5c51-4698-bc27-153c880a5d32",
+        "Comuna": "Lebu",
+        "GeneraciónKwhKwpAño": "1523",
+        "CostoCombustibleMasPeaje": "30520",
+        "ValorVentaEnergía": "88.804"
+    },
+    {
+        "id": "c98bbbac-254a-4897-92e2-7d20a0b3d9b0",
+        "Comuna": "Los Alamos",
+        "GeneraciónKwhKwpAño": "1496",
+        "CostoCombustibleMasPeaje": "43800",
+        "ValorVentaEnergía": "94.484"
+    },
+    {
+        "id": "97abd9ec-71af-469d-86f6-6cb9cec85bdb",
+        "Comuna": "Los Angeles",
+        "GeneraciónKwhKwpAño": "1535",
+        "CostoCombustibleMasPeaje": "37700",
+        "ValorVentaEnergía": "94.484"
+    },
+    {
+        "id": "1fe52204-d0c5-4bba-b097-7e34c1885df4",
+        "Comuna": "Lota",
+        "GeneraciónKwhKwpAño": "1523",
+        "CostoCombustibleMasPeaje": "9480",
+        "ValorVentaEnergía": "87.437"
+    },
+    {
+        "id": "48b8f0af-fac2-4d29-be0d-d47fd5bfc61f",
+        "Comuna": "Mulchen",
+        "GeneraciónKwhKwpAño": "1519",
+        "CostoCombustibleMasPeaje": "26420",
+        "ValorVentaEnergía": "94.484"
+    },
+    {
+        "id": "29e7ac56-b1af-4305-a7a3-05b0561d4527",
+        "Comuna": "Nacimiento",
+        "GeneraciónKwhKwpAño": "1531",
+        "CostoCombustibleMasPeaje": "24420",
+        "ValorVentaEnergía": "88.804"
+    },
+    {
+        "id": "e5a294e4-b034-4d03-a6e2-0b1c832044a7",
+        "Comuna": "Negrete",
+        "GeneraciónKwhKwpAño": "1546",
+        "CostoCombustibleMasPeaje": "28160",
+        "ValorVentaEnergía": "88.804"
+    },
+    {
+        "id": "c752cf08-d207-4650-a858-5952969ab06c",
+        "Comuna": "Penco",
+        "GeneraciónKwhKwpAño": "1535",
+        "CostoCombustibleMasPeaje": "9960",
+        "ValorVentaEnergía": "102.976"
+    },
+    {
+        "id": "d0231920-87dd-446c-84c3-62149ee97717",
+        "Comuna": "Quilaco",
+        "GeneraciónKwhKwpAño": "1536",
+        "CostoCombustibleMasPeaje": "46280",
+        "ValorVentaEnergía": "46.436"
+    },
+    {
+        "id": "14e58fa9-7b1f-487f-a94b-6cc68894fea3",
+        "Comuna": "Quilleco",
+        "GeneraciónKwhKwpAño": "1545",
+        "CostoCombustibleMasPeaje": "42040",
+        "ValorVentaEnergía": "84.745"
+    },
+    {
+        "id": "7c2a6401-819c-4cee-acd3-376913a0d96e",
+        "Comuna": "San Pedro de la Paz",
+        "GeneraciónKwhKwpAño": "1591",
+        "CostoCombustibleMasPeaje": "4400",
+        "ValorVentaEnergía": "102.976"
+    },
+    {
+        "id": "ab74dd8b-3ada-441e-b4a5-da17c906bc4e",
+        "Comuna": "San Rosendo",
+        "GeneraciónKwhKwpAño": "1563",
+        "CostoCombustibleMasPeaje": "35640",
+        "ValorVentaEnergía": "94.484"
+    },
+    {
+        "id": "1edf3e63-0194-4d15-b758-2bd2f7c097e1",
+        "Comuna": "Santa Barbara",
+        "GeneraciónKwhKwpAño": "1530",
+        "CostoCombustibleMasPeaje": "26420",
+        "ValorVentaEnergía": "76.619"
+    },
+    {
+        "id": "8c88f5e5-de2d-487b-a97c-13481728e23a",
+        "Comuna": "Santa Juana",
+        "GeneraciónKwhKwpAño": "1521",
+        "CostoCombustibleMasPeaje": "10780",
+        "ValorVentaEnergía": "94.484"
+    },
+    {
+        "id": "216fb428-8af6-424d-bfe0-fa986ae4200e",
+        "Comuna": "Talcahuano",
+        "GeneraciónKwhKwpAño": "1619",
+        "CostoCombustibleMasPeaje": "7840",
+        "ValorVentaEnergía": "102.976"
+    },
+    {
+        "id": "1d7317d0-93c6-47db-95f0-e0535894b4ff",
+        "Comuna": "Tirua",
+        "GeneraciónKwhKwpAño": "1510",
+        "CostoCombustibleMasPeaje": "26420",
+        "ValorVentaEnergía": "94.484"
+    },
+    {
+        "id": "84dbab7d-bfa4-4bf3-8076-5e5792f325eb",
+        "Comuna": "Tome",
+        "GeneraciónKwhKwpAño": "1538",
+        "CostoCombustibleMasPeaje": "13700",
+        "ValorVentaEnergía": "94.484"
+    },
+    {
+        "id": "5115fffb-5c16-4f05-a56b-e9ebaf98e267",
+        "Comuna": "Tucapel",
+        "GeneraciónKwhKwpAño": "1547",
+        "CostoCombustibleMasPeaje": "36320",
+        "ValorVentaEnergía": "94.484"
+    },
+    {
+        "id": "252da7a4-9c2d-4263-b312-8c90b54f1670",
+        "Comuna": "Yumbel",
+        "GeneraciónKwhKwpAño": "1564",
+        "CostoCombustibleMasPeaje": "23320",
+        "ValorVentaEnergía": "94.484"
+    },
+    {
+        "id": "bd998372-a160-4037-be09-8a32a73be513",
+        "Comuna": "Angol",
+        "GeneraciónKwhKwpAño": "1492",
+        "CostoCombustibleMasPeaje": "26420",
+        "ValorVentaEnergía": "94.484"
+    },
+    {
+        "id": "4e0b404c-3212-480b-a1cf-bc83ad03ba15",
+        "Comuna": "Carahue",
+        "GeneraciónKwhKwpAño": "1382",
+        "CostoCombustibleMasPeaje": "90280",
+        "ValorVentaEnergía": "94.484"
+    },
+    {
+        "id": "48f2549b-edfb-4a13-9c61-952c1dc54dfd",
+        "Comuna": "Cholchol",
+        "GeneraciónKwhKwpAño": "1408",
+        "CostoCombustibleMasPeaje": "81040",
+        "ValorVentaEnergía": "94.484"
+    },
+    {
+        "id": "5be39150-1447-4846-a700-9a9e85342e1d",
+        "Comuna": "Collipulli",
+        "GeneraciónKwhKwpAño": "1492",
+        "CostoCombustibleMasPeaje": "56840",
+        "ValorVentaEnergía": "88.804"
+    },
+    {
+        "id": "feac972f-721d-47b6-ae36-648f5bcdac25",
+        "Comuna": "Cunco",
+        "GeneraciónKwhKwpAño": "1374",
+        "CostoCombustibleMasPeaje": "99140",
+        "ValorVentaEnergía": "94.484"
+    },
+    {
+        "id": "d71d98b8-1a42-4403-87a0-5ade8773a236",
+        "Comuna": "Curacautin",
+        "GeneraciónKwhKwpAño": "1443",
+        "CostoCombustibleMasPeaje": "26420",
+        "ValorVentaEnergía": "94.484"
+    },
+    {
+        "id": "8e590704-94d1-484d-9ee8-4395f2ce1717",
+        "Comuna": "Curarrehue",
+        "GeneraciónKwhKwpAño": "1390",
+        "CostoCombustibleMasPeaje": "122400",
+        "ValorVentaEnergía": "102.976"
+    },
+    {
+        "id": "c51c5237-f619-44d2-88c3-5a36ac85ac5c",
+        "Comuna": "Ercilla",
+        "GeneraciónKwhKwpAño": "1488",
+        "CostoCombustibleMasPeaje": "59920",
+        "ValorVentaEnergía": "94.484"
+    },
+    {
+        "id": "c8e84cd1-f38a-47a9-9f3a-a58cbc9217f0",
+        "Comuna": "Freire",
+        "GeneraciónKwhKwpAño": "1369",
+        "CostoCombustibleMasPeaje": "97540",
+        "ValorVentaEnergía": "94.484"
+    },
+    {
+        "id": "6fb220bc-8fa8-45f5-9611-932c5e46e911",
+        "Comuna": "Galvarino",
+        "GeneraciónKwhKwpAño": "1436",
+        "CostoCombustibleMasPeaje": "53540",
+        "ValorVentaEnergía": "94.484"
+    },
+    {
+        "id": "dbe8b47e-cc0f-470c-8860-82577076117a",
+        "Comuna": "Gorbea",
+        "GeneraciónKwhKwpAño": "1368",
+        "CostoCombustibleMasPeaje": "91060",
+        "ValorVentaEnergía": "94.484"
+    },
+    {
+        "id": "b363b1bf-d290-4102-9cc6-9f419af72e2a",
+        "Comuna": "Lautaro",
+        "GeneraciónKwhKwpAño": "1403",
+        "CostoCombustibleMasPeaje": "79500",
+        "ValorVentaEnergía": "88.804"
+    },
+    {
+        "id": "819625cb-4d0d-4ed1-80e2-710413abe3e8",
+        "Comuna": "Loncoche",
+        "GeneraciónKwhKwpAño": "1333",
+        "CostoCombustibleMasPeaje": "111240",
+        "ValorVentaEnergía": "102.976"
+    },
+    {
+        "id": "fc92da17-7083-4700-9bf5-8aa8688d4141",
+        "Comuna": "Lonquimay",
+        "GeneraciónKwhKwpAño": "1496",
+        "CostoCombustibleMasPeaje": "92540",
+        "ValorVentaEnergía": "76.619"
+    },
+    {
+        "id": "6c446652-9159-422d-bdf6-e1eb8bcf96fe",
+        "Comuna": "Los Sauces",
+        "GeneraciónKwhKwpAño": "1464",
+        "CostoCombustibleMasPeaje": "39600",
+        "ValorVentaEnergía": "94.484"
+    },
+    {
+        "id": "f4684db3-862a-4a47-9957-fae56ba8137d",
+        "Comuna": "Lumaco",
+        "GeneraciónKwhKwpAño": "1449",
+        "CostoCombustibleMasPeaje": "44660",
+        "ValorVentaEnergía": "94.484"
+    },
+    {
+        "id": "61f53d50-69de-406b-82db-175f013d92d7",
+        "Comuna": "Melipeuco",
+        "GeneraciónKwhKwpAño": "1418",
+        "CostoCombustibleMasPeaje": "106180",
+        "ValorVentaEnergía": "84.745"
+    },
+    {
+        "id": "cdde4fe0-f0da-4898-93f4-07494d2ff99c",
+        "Comuna": "Nueva Imperial",
+        "GeneraciónKwhKwpAño": "1393",
+        "CostoCombustibleMasPeaje": "85660",
+        "ValorVentaEnergía": "94.484"
+    },
+    {
+        "id": "0cbf97d1-8329-42fd-a1e1-30e4eef91429",
+        "Comuna": "Padre las Casas",
+        "GeneraciónKwhKwpAño": "1348",
+        "CostoCombustibleMasPeaje": "87920",
+        "ValorVentaEnergía": "94.484"
+    },
+    {
+        "id": "d1e02a33-55c2-4807-b47f-1a8f6a966c4d",
+        "Comuna": "Perquenco",
+        "GeneraciónKwhKwpAño": "1430",
+        "CostoCombustibleMasPeaje": "75980",
+        "ValorVentaEnergía": "94.484"
+    },
+    {
+        "id": "0e21aa63-b103-4ad9-a3ee-bd2a88648349",
+        "Comuna": "Pitrufquen",
+        "GeneraciónKwhKwpAño": "1378",
+        "CostoCombustibleMasPeaje": "98420",
+        "ValorVentaEnergía": "94.484"
+    },
+    {
+        "id": "ab2d88a3-e2cc-4e9a-9693-10860c085783",
+        "Comuna": "Pucon",
+        "GeneraciónKwhKwpAño": "1336",
+        "CostoCombustibleMasPeaje": "115580",
+        "ValorVentaEnergía": "94.484"
+    },
+    {
+        "id": "1ec2e975-6228-4aa2-9326-276285c53bbd",
+        "Comuna": "Puren",
+        "GeneraciónKwhKwpAño": "1436",
+        "CostoCombustibleMasPeaje": "26420",
+        "ValorVentaEnergía": "94.484"
+    },
+    {
+        "id": "84703c53-a757-40df-8f9f-9d4653ab9830",
+        "Comuna": "Renaico",
+        "GeneraciónKwhKwpAño": "1554",
+        "CostoCombustibleMasPeaje": "29480",
+        "ValorVentaEnergía": "84.745"
+    },
+    {
+        "id": "efbcb627-4f40-4a63-9db7-663cea0ebc2f",
+        "Comuna": "Temuco",
+        "GeneraciónKwhKwpAño": "1348",
+        "CostoCombustibleMasPeaje": "84780",
+        "ValorVentaEnergía": "94.484"
+    },
+    {
+        "id": "8ad05ee7-5e1b-47ea-80b7-d56588f3d841",
+        "Comuna": "Teodoro Schmidt",
+        "GeneraciónKwhKwpAño": "1372",
+        "CostoCombustibleMasPeaje": "107000",
+        "ValorVentaEnergía": "94.484"
+    },
+    {
+        "id": "c04992e3-d348-4f4d-acd2-855b66071e1a",
+        "Comuna": "Totlen",
+        "GeneraciónKwhKwpAño": "1440",
+        "CostoCombustibleMasPeaje": "26420",
+        "ValorVentaEnergía": "94.484"
+    },
+    {
+        "id": "99d969a1-3ba7-43e1-976d-cada079a62e8",
+        "Comuna": "Traiguen",
+        "GeneraciónKwhKwpAño": "1293",
+        "CostoCombustibleMasPeaje": "26420",
+        "ValorVentaEnergía": "94.484"
+    },
+    {
+        "id": "2e360626-5ee4-4b2d-9cb6-e033fc75d158",
+        "Comuna": "Victoria",
+        "GeneraciónKwhKwpAño": "1282",
+        "CostoCombustibleMasPeaje": "66580",
+        "ValorVentaEnergía": "94.484"
+    },
+    {
+        "id": "dfbc1eac-8dd7-4325-8176-af4bb3ad37c9",
+        "Comuna": "Vilcun",
+        "GeneraciónKwhKwpAño": "1227",
+        "CostoCombustibleMasPeaje": "26420",
+        "ValorVentaEnergía": "94.484"
+    },
+    {
+        "id": "bdf585be-eec3-40a1-99bc-d944e2bf0445",
+        "Comuna": "Villarrica",
+        "GeneraciónKwhKwpAño": "1212",
+        "CostoCombustibleMasPeaje": "150500",
+        "ValorVentaEnergía": "94.484"
+    }
+]

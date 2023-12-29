@@ -1,29 +1,21 @@
 // import comuna from "../../../../Server/src/comunas.json";
 
 import React, { useEffect, useState } from "react";
-import comuna from "../../../../Server/src/comunas.json";
-import "./cotizador.css";
+import comuna from "../Cotizador/comunas.json"
+
+import "./cotizador.css"
 
 
 import { Link } from 'react-router-dom'
 import Login from "../login/login";
 
-// function listaDeComunas(){
 
-//   const [data, setData] = useState()
 
-//   useEffect(() => {
-//     fetch("../../../../Server/src/comunas.json")
-//       .then((response) => response.json())
-//       .then((data) => {setData(data)})
-//       .catch(error => console.error('Error:', error));
-//   }, [])
-// return data
-// }
+
 
 const Formulario = () => {
 
-  // const comuna = listaDeComunas()
+
 
 
   const [comunas, setComunas] = useState("");

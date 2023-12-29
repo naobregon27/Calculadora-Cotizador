@@ -1,5 +1,6 @@
 import express from "express";
 import path from "path";
+
 import morgan from "morgan";
 import routes from "./routes/index.js";
 
@@ -12,6 +13,7 @@ const __dirname = path.dirname(fileURLToPath(import.meta.url));
 // Settings
 app.set("port", config.PORT);
 app.set("views", path.resolve(__dirname, "views"));
+
 app.set("view engine", "ejs");
 
 // Middlewares

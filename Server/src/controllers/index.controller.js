@@ -1,8 +1,19 @@
 import config from "../config.js";
 import fs from "fs";
 import { v4 } from "uuid";
+import path from 'node:path';
+import { fileURLToPath } from 'node:url';
 
-const json_comuna = fs.readFileSync("src/comunas.json", "utf-8");
+// Obtener la ruta del archivo actual
+const __filename = fileURLToPath(import.meta.url);
+
+// Obtener la ruta del directorio actual
+const __dirname = path.dirname(__filename);
+
+// Usar __dirname como antes
+const comunasPath = path.resolve(__dirname, '../../../cliente/src/Landing/Cotizador/comunas.json');
+
+const json_comuna = fs.readFileSync(comunasPath, "utf-8");
 let comuna = JSON.parse(json_comuna);
 
 export const renderIndexPage = (req, res) => res.render("index", { comuna });
@@ -32,7 +43,7 @@ export const createNewEntry = (req, res) => {
 
   // saving the array in a file
   const json_comuna = JSON.stringify(comuna);
-  fs.writeFileSync("src/comunas.json", json_comuna, "utf-8");
+  fs.writeFileSync(comunasPath , json_comuna, "utf-8");
 
   res.redirect("/");
 };
@@ -43,7 +54,7 @@ export const deleteComuna = (req, res) => {
 
   // saving data
   const json_comuna = JSON.stringify(comuna);
-  fs.writeFileSync("src/comunas.json", json_comuna);
+  fs.writeFileSync(comunasPath, json_comuna);
   res.redirect("/");
 };
 
