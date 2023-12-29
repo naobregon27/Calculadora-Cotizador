@@ -803,12 +803,5 @@
         "GeneraciónKwhKwpAño": "1212",
         "CostoCombustibleMasPeaje": "150500",
         "ValorVentaEnergía": "94.484"
-    },
-    {
-        "id": "4898cfee-8f9f-4f17-979d-7ad2d746f61f",
-        "Comuna": "Goya",
-        "GeneraciónKwhKwpAño": "145",
-        "CostoCombustibleMasPeaje": "145",
-        "ValorVentaEnergía": "145"
     }
 ]
