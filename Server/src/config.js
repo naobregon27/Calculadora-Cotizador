@@ -1,7 +1,9 @@
-import { config } from "dotenv";
-config();
-
-export default {
-  PORT: process.env.PORT || 5000,
-  APPID: process.env.APPID || "",
+export const db = {
+  user: process.env.DB_USER || "postgres",
+  password: process.env.DB_PASSWORD || "Mateo123",
+  host: process.env.DB_HOST || "localhost",
+  port: process.env.DB_PORT || 5432,
+  database: process.env.DB_DATABASE || "comuna",
 };
+
+export const port = process.env.PORT || 4000;

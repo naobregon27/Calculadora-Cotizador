@@ -1,8 +1,5 @@
+# nodejs
 node_modules
 
+## environment variables
 .env
-
-dist
-
-package-lock.json
-yarn.lock

@@ -1,0 +1,39 @@
+version: "3.8"
+
+services:
+  # web:
+  #   build: .
+  #   command: npm run dev
+  #   volumes:
+  #     - .:/usr/app
+  #   ports:
+  #     - "4000:4000"
+  #   depends_on:
+  #     - db
+  #   environment:
+  #     - DB_USER=postgres
+  #     - DB_PASSWORD=faztpassword
+  #     - DB_HOST=db
+  #     - DB_PORT=5432
+  #     - DB_DATABASE=tasksdb
+
+  db:
+    container_name: postgresdb
+    image: postgres
+    restart: always
+    ports:
+      - 5432:5432
+    environment:
+      POSTGRES_PASSWORD: faztpassword
+      POSTGRES_DB: tasksdb
+    volumes: 
+      - ./database/init.sql:/docker-entrypoint-initdb.d/init.sql
+
+  pgadmin:
+    container_name: mypgadmin
+    image: dpage/pgadmin4
+    ports:
+      - 8080:80
+    environment:
+      - PGADMIN_DEFAULT_EMAIL=fazt@fazt.com
+      - PGADMIN_DEFAULT_PASSWORD=faztpassword

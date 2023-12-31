@@ -1,0 +1,12 @@
+.card{
+    background-color:rgb(180, 214, 129);
+    width: 90%;
+    margin-left: 3%;
+    text-justify:distribute;
+    border-radius: 10px 10px 10px 10px;
+    border-color:grey;
+    
+}
+.carTitulo{
+    font-size: smaller;
+}

@@ -1,7 +1,7 @@
 // import comuna from "../../../../Server/src/comunas.json";
 
 import React, { useEffect, useState } from "react";
-import comuna from "../Cotizador/comunas.json"
+//import comuna from "../Cotizador/comunas.json"
 
 import "./cotizador.css"
 
@@ -12,13 +12,34 @@ import Login from "../login/login";
 
 
 
-
 const Formulario = () => {
 
+const [comuna, setComuna] = useState([])
 
+useEffect(()=>{
+
+  async function getAllComunas() {
+    try {
+      const res = await fetch("http://localhost:4000/comunas");
+      const comunas = await res.json();
+      setComuna(comunas);
+    } catch (error) {
+      console.log(error);
+    }
+      
+  }
+
+  getAllComunas()
+
+},[])
+
+console.log(comuna)
 
 
   const [comunas, setComunas] = useState("");
+  
+  
+
   const [input, setInput] = useState({
     consumo1: "",
     consumo2: "",
@@ -180,12 +201,12 @@ const Formulario = () => {
     inputValor12 || 0;
 
   const GeneracionKwhKwpYear = comuna?.find(
-    (x) => x.Comuna?.toLowerCase() === comunas?.toLowerCase()
-  )?.["GeneraciónKwhKwpAño"] || 0;
+    (x) => x.comuna?.toLowerCase() === comunas?.toLowerCase()
+  )?.generacion || 0;
 
   const valorVentaDeEnergia = comuna?.find(
-    (y) => y.Comuna?.toLowerCase() === comunas?.toLowerCase()
-  )?.["ValorVentaEnergía"] || 0;
+    (y) => y.comuna?.toLowerCase() === comunas?.toLowerCase()
+  )?.valorventaenergia || 0;
 
   //! valor del kit
   const kit = {
@@ -280,7 +301,7 @@ const Formulario = () => {
     }
     ;
   }
-  comuna.sort((a, b) => a.Comuna.localeCompare(b.Comuna));
+  comuna.sort((a, b) => a.comuna.localeCompare(b.Comuna));
 
   const precios = {
     tres: { paneles: 6, inversor: "Inversor OnGrid 3kw", canalizacion: 20 },
@@ -351,8 +372,8 @@ const Formulario = () => {
             <option value="">Selecciones una comuna</option>
             {comuna?.map((x) => {
               return (
-                <option value={x.Comuna} key={x.Comuna}>
-                  {x.Comuna}
+                <option value={x.comuna} key={x.comuna}>
+                  {x.comuna}
                 </option>
               );
             })}
@@ -485,8 +506,8 @@ const Formulario = () => {
         <h4 class="col-sm-8">
           {
             comuna?.find(
-              (x) => x.Comuna?.toLowerCase() === comunas?.toLowerCase()
-            )?.Comuna
+              (x) => x.comuna?.toLowerCase() === comunas?.toLowerCase()
+            )?.comuna
           }
         </h4>
 
@@ -495,8 +516,8 @@ const Formulario = () => {
         <h4 class="col-sm-8">
           {
             comuna?.find(
-              (x) => x.Comuna?.toLowerCase() === comunas?.toLowerCase()
-            )?.["GeneraciónKwhKwpAño"]
+              (x) => x.comuna?.toLowerCase() === comunas?.toLowerCase()
+            )?.generacion
           }
         </h4>
 
@@ -505,8 +526,8 @@ const Formulario = () => {
         <h4 class="col-sm-8">
           {
             comuna?.find(
-              (x) => x.Comuna?.toLowerCase() === comunas?.toLowerCase()
-            )?.["CostoCombustibleMasPeaje"]
+              (x) => x.comuna?.toLowerCase() === comunas?.toLowerCase()
+            )?.costocombustiblepeaje
           }{valor}
         </h4>
 
@@ -515,8 +536,8 @@ const Formulario = () => {
         <h4 class="col-sm-8">
           {
             comuna?.find(
-              (x) => x.Comuna?.toLowerCase() === comunas?.toLowerCase()
-            )?.["ValorVentaEnergía"]
+              (x) => x.comuna?.toLowerCase() === comunas?.toLowerCase()
+            )?.valorventaenergia 
           }
         </h4>
 
