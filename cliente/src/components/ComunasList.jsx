@@ -9,7 +9,7 @@ const ComunasList = () => {
   const [comunas, setComunas] = useState([]);
 
   const loadComunas = async () => {
-    const response = await fetch("https://calculadora-mylo.onrender.com/comunas");
+    const response = await fetch("http://localhost:4000/comunas");
     const data = await response.json();
     console.log(data);
     setComunas(data);
