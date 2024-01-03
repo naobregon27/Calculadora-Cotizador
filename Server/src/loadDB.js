@@ -29,6 +29,7 @@ const loadDB = async () => {
   } catch (error) {
     console.error("Error al actualizar la base de datos:", error);
   }
+  
 };
 
 export default  loadDB;
