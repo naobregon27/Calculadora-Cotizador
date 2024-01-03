@@ -41,7 +41,7 @@ export const getAllComunas = async (req, res, next) => {
 export const getComuna = async (req, res) => {
   try {
     const { id } = req.params;
-    const result = await pool.query("SELECT * FROM comunas WHERE id = $1", [id]);
+    const result = await pool.query(`SELECT * FROM comunas WHERE id = $1`, [id]);
 
     if (result.rows.length === 0)
       return res.status(404).json({ message: "Task not found" });
@@ -61,7 +61,7 @@ export const updateComuna = async (req, res) => {
          costocombustiblepeaje,
          valorventaenergia } = req.body;
 
-  const result= await pool.query("UPDATE comunas SET comuna = $1, generacion = $2, costocombustiblepeaje = $3, valorventaenergia = $4 WHERE id = $5 RETURNING *" , [comuna,
+  const result= await pool.query(`UPDATE comunas SET comuna = $1, generacion = $2, costocombustiblepeaje = $3, valorventaenergia = $4 WHERE id = $5 RETURNING *` , [comuna,
     generacion,
     costocombustiblepeaje,
     valorventaenergia,
