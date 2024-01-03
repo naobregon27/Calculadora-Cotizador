@@ -3,7 +3,7 @@ import comuna from './comunas.json' assert { type: 'json' };
 
 const loadDB = async () => {
   try {
-    // Consulta las filas existentes en la tabla "country"
+    // Consulta las filas existentes en la tabla "comuna"
     const result = await pool.query('SELECT * FROM comunas');
 
     // Si no hay filas, carga los datos desde la API y los inserta en la base de datos
@@ -17,7 +17,7 @@ const loadDB = async () => {
         };
       });
 
-      // Inserta los datos en la tabla "country"
+      // Inserta los datos en la tabla "comuna"
       for (let i = 0; i < comunas.length; i++) {
         const { comuna, generacion, costocombustiblepeaje, valorventaenergia } = comunas[i];
         const insertQuery = `INSERT INTO comunas ( comuna, generacion, costocombustiblepeaje, valorventaenergia ) VALUES ($1, $2, $3, $4)`;
