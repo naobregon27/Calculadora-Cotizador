@@ -6,7 +6,7 @@ const Login = () => {
     const [password, setPassword] = useState('');
 
     const irAUrl = () => {
-        window.location.href = "http://localhost:5173/";
+        window.location.href = "https://effortless-unicorn-7eeff8.netlify.app/comuna";
     };
 
     const handleSubmit = (event) => {
@@ -18,7 +18,7 @@ const Login = () => {
 
         if (username === correctUsername && password === correctPassword) {
             alert('Inicio de sesión exitoso');
-            window.location.href = 'http://localhost:5173/';
+            window.location.href = 'https://effortless-unicorn-7eeff8.netlify.app/comuna';
         } else {
             alert('Nombre de usuario o contraseña incorrectos');
         }
