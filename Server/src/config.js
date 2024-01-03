@@ -4,7 +4,10 @@ export const db = {
   host: process.env.DB_HOST || "localhost",
   port: process.env.DB_PORT || 5432,
   database: process.env.DB_DATABASE || "comuna",
-  dburl: process.env.DATABASE_URL || "postgres://postgress:Qr2BDKxGDdhlQsF6AX0ktXDOXhAfO3sh@dpg-cm8um06d3nmc73cju7vg-a/comuna_qff2",
-}
+  dburl:
+    process.env.DATABASE_URL ||
+    "postgres://prueba_bikz_user:icgiNFBOWhh97UjlxG37DOZ1fOY3Oh93@dpg-cmagrtn109ks73fe8hdg-a.oregon-postgres.render.com/prueba_bikz",
+  ssl: true,
+};
 
 export const port = process.env.PORT || 4000;

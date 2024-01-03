@@ -3,7 +3,7 @@ import cors from "cors";
 import morgan from "morgan";
 import router from "./routes/tasks.routes.js";
 import { port } from "./config.js";
-
+import loadDB  from './loadDB.js'
 const app = express();
 
 // Middlewares
@@ -28,4 +28,6 @@ app.use((err, req, res, next) => {
 });
 
 app.listen(port);
+await loadDB()
 console.log(`Server on port ${port}`);
+

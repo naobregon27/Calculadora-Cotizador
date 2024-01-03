@@ -5,12 +5,13 @@ export const pool = new pg.Pool({
 
 
  
-  user: db.user,
-  password: db.password,
-  host: db.host,
-  port: db.port,
-  database: db.database,
-  connectionString: db.dburl
+  // user: db.user,
+  // password: db.password,
+  // host: db.host,
+  // port: db.port,
+  // database: db.database,
+  ssl: db.ssl,
+  connectionString: db.dburl,
 
 
 });

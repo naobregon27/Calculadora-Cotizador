@@ -6,7 +6,7 @@ export const createComuna = async (req, res,) => {
     generacion,
     costocombustiblepeaje,
     valorventaenergia } = req.body;
-
+console.log(req.body)
   try {
 
     const result = await pool.query('INSERT INTO comunas (comuna, generacion, costocombustiblepeaje , valorventaenergia) VALUES($1, $2, $3, $4)RETURNING *', [
@@ -28,8 +28,12 @@ export const createComuna = async (req, res,) => {
 export const getAllComunas = async (req, res, next) => {
   try {
     const allComunas = await pool.query("SELECT * FROM comunas");
+    if (allComunas.rows.length === 0) {
+      return res.status(404).json({ message: "No se encontraron comunas" });
+    }
     res.json(allComunas.rows);
   } catch (error) {
+    console.log(error)
     next(error);
   }
 };

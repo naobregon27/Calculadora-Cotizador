@@ -1,31 +1,34 @@
-const axios = require('axios');
-const {Country} = require('./src/db.js');
+import { pool } from './db.js'
+import comuna from './comunas.json' assert { type: 'json' };
 
 const loadDB = async () => {
-  const dbCountries = Country.findAll();
-  if (!dbCountries.length) {
-    const urlApi = await axios.get("http://localhost:5000/countries");
-    const infApi = await urlApi.data.map((pais) => {
-      return {
-        id: pais.cca3,
-        name: pais.name.common,
-        image: pais.flags.svg,
-        continent: pais.continents[0],
-        capital: pais.capital ? pais.capital[0] : "Capital",
-        subregion: pais.subregion ? pais.subregion : "Subregion",
-        area: pais.area,
-        population: pais.population,
-      };
-    });
-    for (let i = 0; i < infApi.length; i++) {
-      await Country.findOrCreate({
-        where: { name: infApi[i].name },
-        defaults: infApi[i],
+  try {
+    // Consulta las filas existentes en la tabla "country"
+    const result = await pool.query('SELECT * FROM comunas');
+
+    // Si no hay filas, carga los datos desde la API y los inserta en la base de datos
+    if (result.rows.length === 0) {
+      const comunas = comuna.map((x) => {
+        return {
+          comuna: x.Comuna,
+          generacion: x.GeneraciónKwhKwpAño,
+          costocombustiblepeaje: x.CostoCombustibleMasPeaje,
+          valorventaenergia: x.ValorVentaEnergía
+        };
       });
+
+      // Inserta los datos en la tabla "country"
+      for (let i = 0; i < comunas.length; i++) {
+        const { comuna, generacion, costocombustiblepeaje, valorventaenergia } = comunas[i];
+        const insertQuery = `INSERT INTO comunas ( comuna, generacion, costocombustiblepeaje, valorventaenergia ) VALUES ($1, $2, $3, $4)`;
+        await pool.query(insertQuery, [comuna, generacion, costocombustiblepeaje, valorventaenergia]);
+      }
+
+      console.log("La Base De Datos ha sido actualizada");
     }
-    //console.log(infApi)
-    console.log("La Base De Datos ha sido actualizada");
+  } catch (error) {
+    console.error("Error al actualizar la base de datos:", error);
   }
 };
 
-module.exports = loadDB;
+export default  loadDB;
