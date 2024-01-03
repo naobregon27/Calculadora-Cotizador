@@ -24,14 +24,14 @@ const ComunasForm = () => {
   }, [params.id]);
 
   const loadTask = async (id) => {
-    const res = await fetch("https://calculadora-mylo.onrender.com/comunas/" + id);
+    const res = await fetch("http://localhost:4000/comunas/" + id);
     const data = await res.json();
     setComu({ comuna: data.comuna, Generacion: data.generacion, costocombustiblepeaje: data.costocombustiblepeaje, valorventaenergia: data.valorventaenergia });
   };
 
   const handleDelete = async (id) => {
     try {
-      await fetch(`https://calculadora-mylo.onrender.com/comunas/${id}`, {
+      await fetch(`http://localhost:4000/comunas/${id}`, {
         method: "DELETE",
       });
       navigate("/comuna");
@@ -46,7 +46,7 @@ const ComunasForm = () => {
     try {
       if (params.id) {
         const response = await fetch(
-          "https://calculadora-mylo.onrender.com/comunas/" + params.id,
+          "http://localhost:4000/comunas/" + params.id,
           {
             method: "PUT",
             headers: { "Content-Type": "application/json" },
@@ -55,7 +55,7 @@ const ComunasForm = () => {
         );
         await response.json();
       } else {
-        const response = await fetch("https://calculadora-mylo.onrender.com/comunas/", {
+        const response = await fetch("http://localhost:4000/comunas", {
           method: "POST",
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify(comu),
