@@ -1,4 +1,4 @@
-// import comuna from "../../../../Server/src/comunas.json";
+import comuna from "../../../../Server/src/comunas.json";
 
 import React, { useEffect, useState } from "react";
 //import comuna from "../Cotizador/comunas.json"
