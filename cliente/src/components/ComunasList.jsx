@@ -9,9 +9,10 @@ const ComunasList = () => {
   const [comunas, setComunas] = useState([]);
 
   const loadComunas = async () => {
-    const response = await fetch("http://localhost:4000/comunas");
+    //const response = await fetch("https://prueba-owrk.onrender.com/comunas"); //local
+    const response = await fetch("http://localhost:3001/comunas"); //deployado
     const data = await response.json();
-    console.log(data);
+    data.sort((a, b) => a.comuna.localeCompare(b.comuna))
     setComunas(data);
   };
 
@@ -20,7 +21,7 @@ const ComunasList = () => {
   }, []);
 
   return (
-    <div class="conteiner p3">
+    <div className="conteiner p3">
       <Navbar></Navbar>
       <br />
       <br />

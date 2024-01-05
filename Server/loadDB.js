@@ -1,15 +1,14 @@
-import { pool } from "./db.js";
-import axios from "axios";
+const axios = require("axios");
+const { Comunas } = require("./src/db.js");
 
 const loadDB = async () => {
   try {
     // Consulta las filas existentes en la tabla "comuna"
-    const result = await pool.query("SELECT * FROM comunas");
+    const result = await Comunas.findAll();
 
     // Si no hay filas, carga los datos desde la API y los inserta en la base de datos
-    if (!result.rows.length === 0) {
+    if (!result.length) {
       const urlApi = await axios.get("http://localhost:5000/comunas");
-      console.log(urlApi);
       const comunas = await urlApi.data.map((x) => {
         return {
           comuna: x.Comuna,
@@ -21,15 +20,12 @@ const loadDB = async () => {
 
       // Inserta los datos en la tabla "comuna"
       for (let i = 0; i < comunas.length; i++) {
-        const { comuna, generacion, costocombustiblepeaje, valorventaenergia } =
-          comunas[i];
-        const insertQuery = `INSERT INTO comunas ( comuna, generacion, costocombustiblepeaje, valorventaenergia ) VALUES ($1, $2, $3, $4)`;
-        await pool.query(insertQuery, [
-          comuna,
-          generacion,
-          costocombustiblepeaje,
-          valorventaenergia,
-        ]);
+        await Comunas.findOrCreate({
+          where: {
+            comuna: comunas[i].comuna,
+          },
+          defaults: comunas[i],
+        });
       }
 
       console.log("La Base De Datos ha sido actualizada");
@@ -39,4 +35,4 @@ const loadDB = async () => {
   }
 };
 
-export default loadDB;
+module.exports = loadDB;

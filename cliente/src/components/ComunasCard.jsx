@@ -16,7 +16,7 @@ function ComunasCard({ comuna }) {
       
       <br />
       <div
-        class="card bg-success bg-gradient text-light card-body"
+        className="card bg-success bg-gradient text-light card-body"
         onClick={() => navigate(`/comunas/${comuna.id}/edit`)}
       >
 

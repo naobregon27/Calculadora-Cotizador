@@ -37,7 +37,7 @@
 }
 
 .fondo {
-    background-image: url("../../../public/portada-calculadora-de-vacaciones.jpg");
+    background-image: url("/portada-calculadora-de-vacaciones.jpg");
     background-size: cover;
     /* Ajusta la imagen para cubrir todo el div */
     background-position: center;

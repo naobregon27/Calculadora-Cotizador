@@ -1,39 +1,30 @@
-import comuna from "../../../../Server/src/comunas.json";
-
 import React, { useEffect, useState } from "react";
-//import comuna from "../Cotizador/comunas.json"
-
 import "./cotizador.css"
 
-
-import { Link } from 'react-router-dom'
-import Login from "../login/login";
+import axios from "axios"
 
 
 
 
 const Formulario = () => {
 
-const [comuna, setComuna] = useState([])
+  const [comuna, setComuna] = useState([]);
 
-useEffect(()=>{
-
-  async function getAllComunas() {
-    try {
-      const res = await fetch("http://localhost:4000/comunas");
-      const comunas = await res.json();
-      setComuna(comunas);
-    } catch (error) {
-      console.log(error);
+  useEffect(() => {
+    async function getAllComunas() {
+      try {
+       const res = await axios.get('http://localhost:3001/comunas'); //local
+       //const res = await axios.get('https://prueba-owrk.onrender.com/comunas'); //deployado
+        const comunas = res.data;
+        console.log(comunas);
+        setComuna(comunas);
+      } catch (error) {
+        console.log(error);
+      }
     }
-      
-  }
-
-  getAllComunas()
-
-},[])
-
-console.log(comuna)
+  
+    getAllComunas();
+  }, []);
 
 
   const [comunas, setComunas] = useState("");
@@ -301,7 +292,7 @@ console.log(comuna)
     }
     ;
   }
-  comuna.sort((a, b) => a.comuna.localeCompare(b.Comuna));
+  comuna.sort((a, b) => a.comuna.localeCompare(b.comuna));
 
   const precios = {
     tres: { paneles: 6, inversor: "Inversor OnGrid 3kw", canalizacion: 20 },
@@ -344,10 +335,10 @@ console.log(comuna)
 
 
   return (
-    <div class="conteiner p-4">
+    <div className="conteiner p-4">
       <div className="fondo">
              
-      <a class="btn btn-success" href="https://ochoaim.cl/"><buttom className= "Boton">Web principal</buttom></a>
+      <a className="btn btn-success" href="https://ochoaim.cl/"><button className= "Boton">Web principal</button></a>
         <h1 className="titulo">Cotizador</h1>
       </div>
       <br />
@@ -362,9 +353,9 @@ console.log(comuna)
       
       
 
-      <div class="col-md-4 mx-auto">
+      <div className="col-md-4 mx-auto">
 
-        <form class="card bg-success bg-gradient text-light card-body" >
+        <form className="card bg-success bg-gradient text-light card-body" >
           <h3>Comuna</h3>
 
           <select value={comunas} onChange={handleComuna}>
@@ -378,7 +369,7 @@ console.log(comuna)
               );
             })}
           </select>
-          <div class="mb-3">
+          <div className="mb-3">
             <h3 className="consumo">Consumo Mensuales</h3>
 
             <input
@@ -498,12 +489,12 @@ console.log(comuna)
       </div>
 
 
-      <div class="row">
+      <div className="row">
 
 
 
-        <h4 class="col-sm-4">Nombre de la comuna: </h4>
-        <h4 class="col-sm-8">
+        <h4 className="col-sm-4">Nombre de la comuna: </h4>
+        <h4 className="col-sm-8">
           {
             comuna?.find(
               (x) => x.comuna?.toLowerCase() === comunas?.toLowerCase()
@@ -512,8 +503,8 @@ console.log(comuna)
         </h4>
 
 
-        <h4 class="col-sm-4">Generación kwh kwp año: </h4>
-        <h4 class="col-sm-8">
+        <h4 className="col-sm-4">Generación kwh kwp año: </h4>
+        <h4 className="col-sm-8">
           {
             comuna?.find(
               (x) => x.comuna?.toLowerCase() === comunas?.toLowerCase()
@@ -522,8 +513,8 @@ console.log(comuna)
         </h4>
 
 
-        <h4 class="col-sm-4">Costo de combustible mas peaje: </h4>
-        <h4 class="col-sm-8">
+        <h4 className="col-sm-4">Costo de combustible mas peaje: </h4>
+        <h4 className="col-sm-8">
           {
             comuna?.find(
               (x) => x.comuna?.toLowerCase() === comunas?.toLowerCase()
@@ -532,8 +523,8 @@ console.log(comuna)
         </h4>
 
 
-        <h4 class="col-sm-4">Valor de venta energía: </h4>
-        <h4 class="col-sm-8">
+        <h4 className="col-sm-4">Valor de venta energía: </h4>
+        <h4 className="col-sm-8">
           {
             comuna?.find(
               (x) => x.comuna?.toLowerCase() === comunas?.toLowerCase()
@@ -542,20 +533,20 @@ console.log(comuna)
         </h4>
 
 
-        <h4 class="col-sm-4">Valor Historico: </h4>
-        <h4 class="col-sm-8">
+        <h4 className="col-sm-4">Valor Historico: </h4>
+        <h4 className="col-sm-8">
           {Intl.NumberFormat().format(valorHistorico)}
         </h4>
 
 
-        <h4 class="col-sm-4">Valor Kit: </h4>
-        <h4 class="col-sm-8">
+        <h4 className="col-sm-4">Valor Kit: </h4>
+        <h4 className="col-sm-8">
           {Intl.NumberFormat().format(valorDelKit)}
         </h4>
 
 
-        <h4 class="col-sm-4">Valor de combustible: </h4>
-        <h4 class="col-sm-8">
+        <h4 className="col-sm-4">Valor de combustible: </h4>
+        <h4 className="col-sm-8">
           {Intl.NumberFormat("en-US", {
             style: "currency",
             currency: "USD",
@@ -565,8 +556,8 @@ console.log(comuna)
         </h4>
 
 
-        <h4 class="col-sm-4">Valor de Cotizacion: </h4>
-        <h4 class="col-sm-8">
+        <h4 className="col-sm-4">Valor de Cotizacion: </h4>
+        <h4 className="col-sm-8">
           {Intl.NumberFormat("en-US", {
             style: "currency",
             currency: "USD",
@@ -584,7 +575,7 @@ console.log(comuna)
 
       {ahorroPorYear?.map((x, y) => {
         return (
-          <table class="table table-success  table-striped" key={y + 1}>
+          <table className="table table-success  table-striped" key={y + 1}>
             <thead>
               <tr>
                 <th scope="col"><h5>Años</h5></th>

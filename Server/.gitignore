@@ -1,5 +1,28 @@
-# nodejs
-node_modules
+# Ignorar archivos y carpetas generados por npm y Node.js
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+package-lock.json
+/yarn.lock
 
-## environment variables
+# Ignorar archivo de entorno
 .env
+
+# Ignorar archivos generados por IDEs o editores de código
+.vscode/
+.idea/
+*.code-workspace
+
+# Ignorar archivos y carpetas de pruebas y construcción
+/coverage/
+/.nyc_output/
+/build/
+/dist/
+/out/
+
+# Ignorar archivos y carpetas específicas
+/logs/
+/tmp/
+.DS_Store
+Thumbs.db

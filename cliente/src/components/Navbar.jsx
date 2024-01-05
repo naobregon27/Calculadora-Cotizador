@@ -7,16 +7,16 @@ export default function ButtonAppBar() {
   const location = useLocation()
 
   return (
-    <nav class="navbar navbar-light bg-light navbar-expand-lg" >
+    <nav className="navbar navbar-light bg-light navbar-expand-lg" >
       <Link to="/comuna">
-        <h1 class="navbar-brand">Comuna</h1>
+        <h1 className="navbar-brand">Comuna</h1>
       </Link>
 
 
 
       {location.pathname === "/comuna/new" || location.pathname.includes('/comunas/') ? (
         <button
-          class="btn btn-outline-success my-2 my-sm-0"
+          className="btn btn-outline-success my-2 my-sm-0"
           onClick={() => navigate("/comuna")}
         >
           Go back
@@ -24,7 +24,7 @@ export default function ButtonAppBar() {
 
       ) : (
         <button
-          class="btn btn-outline-success my-2 my-sm-0"
+          className="btn btn-outline-success my-2 my-sm-0"
           onClick={() => navigate("/comuna/new")}
         >
           Add Comuna
@@ -32,7 +32,7 @@ export default function ButtonAppBar() {
       )}
 
       <button
-        class="btn btn-outline-success my-2 my-sm-0"
+        className="btn btn-outline-success my-2 my-sm-0"
         onClick={() => navigate("/")}
       >
         Cerrar seccion
