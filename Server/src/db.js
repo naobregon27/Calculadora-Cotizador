@@ -6,24 +6,24 @@ const path = require("path");
 const { DB_USER, DB_PASSWORD, DB_HOST, DB_RENDER } = process.env;
 
 // //! este sequelize es para local...
-const sequelize = new Sequelize("comuna", "postgres", "Mateo123",
-  {
-    host: "localhost",
-    dialect: "postgres",
-    logging: false, // set to console.log to see the raw SQL queries
-    native: false, // lets Sequelize know we can use pg-native for ~30% more speed
-    ssl: true, 
-  });
+// const sequelize = new Sequelize("comuna", "postgres", "Mateo123",
+//   {
+//     host: "localhost",
+//     dialect: "postgres",
+//     logging: false, // set to console.log to see the raw SQL queries
+//     native: false, // lets Sequelize know we can use pg-native for ~30% more speed
+//     ssl: true, 
+//   });
 
 //! este sequelize es para RENDERIZADO... DEPLOY DB en render.s.
 
-// const sequelize = new Sequelize(DB_RENDER, {
-//   logging: false,
-//   native: false,
-//   dialectOptions: {
-//     ssl: true, // Deshabilitar la conexión SSL/TLS
-//   },
-// });
+const sequelize = new Sequelize("postgres://nahuel:XVN1SVNYbln0BwZLgo8BcSG5xV1W72xi@dpg-cma2huocmk4c739h7m70-a.oregon-postgres.render.com/calculadora_cotizad", {
+  logging: false,
+  native: false,
+  dialectOptions: {
+    ssl: true, // Deshabilitar la conexión SSL/TLS
+  },
+});
 
 //cargamos los archivos en los modelos dinamicos
 const basename = path.basename(__filename);
