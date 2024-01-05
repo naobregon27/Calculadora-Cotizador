@@ -24,16 +24,16 @@ const ComunasForm = () => {
   }, [params.id]);
 
   const loadTask = async (id) => {
-    const res = await fetch("http://localhost:3001/comunas/" + id); //local
-    // const res = await fetch("https://prueba-owrk.onrender.com/comunas/" + id); //deployado
+    //const res = await fetch("http://localhost:3001/comunas/" + id); //local
+    const res = await fetch("https://calculadora-mylo.onrender.com/comunas/" + id); //deployado
     const data = await res.json();
     setComu({ comuna: data.comuna, Generacion: data.generacion, costocombustiblepeaje: data.costocombustiblepeaje, valorventaenergia: data.valorventaenergia });
   };
 
   const handleDelete = async (id) => {
     try {
-      await fetch(`http://localhost:3001/comunas/delete/${id}`, {//Local
-      //await fetch(`https://prueba-owrk.onrender.com/comunas/delete/${id}`, {//deployado
+      //await fetch(`http://localhost:3001/comunas/delete/${id}`, {//Local
+      await fetch(`https://calculadora-mylo.onrender.com/comunas/delete/${id}`, {//deployado
         method: "DELETE",
       });
       navigate("/comuna");
@@ -48,8 +48,8 @@ const ComunasForm = () => {
     try {
       if (params.id) {
         const response = await fetch(
-          "http://localhost:3001/comunas/" + params.id, //local
-          //"https://prueba-owrk.onrender.com/comunas/" + params.id, //deployado
+          //"http://localhost:3001/comunas/" + params.id, //local
+          "https://calculadora-mylo.onrender.com/comunas/" + params.id, //deployado
           {
             method: "PUT",
             headers: { "Content-Type": "application/json" },
@@ -58,8 +58,8 @@ const ComunasForm = () => {
         );
         await response.json();
       } else {
-        const response = await fetch("http://localhost:3001/comunas", { //local 
-        //const response = await fetch("https://prueba-owrk.onrender.com/comunas", { //deployado
+        //const response = await fetch("http://localhost:3001/comunas", { //local 
+        const response = await fetch("https://calculadora-mylo.onrender.com/comunas", { //deployado
            method: "POST",
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify(comu),

@@ -13,8 +13,8 @@ const Formulario = () => {
   useEffect(() => {
     async function getAllComunas() {
       try {
-       const res = await axios.get('http://localhost:3001/comunas'); //local
-       //const res = await axios.get('https://prueba-owrk.onrender.com/comunas'); //deployado
+       //const res = await axios.get('http://localhost:3001/comunas'); //local
+       const res = await axios.get('https://calculadora-mylo.onrender.com/comunas'); //deployado
         const comunas = res.data;
         console.log(comunas);
         setComuna(comunas);

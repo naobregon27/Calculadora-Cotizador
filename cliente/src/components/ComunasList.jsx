@@ -9,8 +9,8 @@ const ComunasList = () => {
   const [comunas, setComunas] = useState([]);
 
   const loadComunas = async () => {
-    //const response = await fetch("https://prueba-owrk.onrender.com/comunas"); //local
-    const response = await fetch("http://localhost:3001/comunas"); //deployado
+    const response = await fetch("https://calculadora-mylo.onrender.com/comunas"); //deployado
+    //const response = await fetch("http://localhost:3001/comunas"); //local
     const data = await response.json();
     data.sort((a, b) => a.comuna.localeCompare(b.comuna))
     setComunas(data);
