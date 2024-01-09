@@ -688,10 +688,10 @@ const Formulario = () => {
           </AreaChart>
         </ResponsiveContainer>
 
+        <br />
+
 
       </div>
-
-
       {
         valorHistorico > 0 && (
 
