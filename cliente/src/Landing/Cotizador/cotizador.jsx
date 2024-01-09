@@ -520,7 +520,7 @@ const Formulario = () => {
 
 
 
-          <h3>Coste De Energia</h3>
+          <h3>Costo De Energia</h3>
           <input
             type="text"
             name="consumo"
