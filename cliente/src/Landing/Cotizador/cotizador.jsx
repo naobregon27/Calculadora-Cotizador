@@ -1,7 +1,11 @@
 import React, { useEffect, useState } from "react";
 import "./cotizador.css"
-
 import axios from "axios"
+import { AreaChart, Area, CartesianGrid, Legend, ResponsiveContainer, Tooltip, XAxis, YAxis } from "recharts";
+
+import { PieChart, Pie, Cell } from 'recharts';
+
+
 
 
 
@@ -13,8 +17,8 @@ const Formulario = () => {
   useEffect(() => {
     async function getAllComunas() {
       try {
-       //const res = await axios.get('http://localhost:3001/comunas'); //local
-       const res = await axios.get('https://calculadora-mylo.onrender.com/comunas'); //deployado
+        //const res = await axios.get('http://localhost:3001/comunas'); //local
+        const res = await axios.get('https://calculadora-mylo.onrender.com/comunas'); //deployado
         const comunas = res.data;
         console.log(comunas);
         setComuna(comunas);
@@ -22,14 +26,14 @@ const Formulario = () => {
         console.log(error);
       }
     }
-  
+
     getAllComunas();
   }, []);
 
 
   const [comunas, setComunas] = useState("");
-  
-  
+
+
 
   const [input, setInput] = useState({
     consumo1: "",
@@ -45,6 +49,7 @@ const Formulario = () => {
     consumo11: "",
     consumo12: "",
     costeDeEnergia: "",
+    consumoMensual: "",
   });
 
   const handleComuna = (e) => {
@@ -66,6 +71,7 @@ const Formulario = () => {
       consumo11: "",
       consumo12: "",
       costeDeEnergia: "",
+      consumoMensual: "",
     });
   }, [comunas]);
 
@@ -160,6 +166,13 @@ const Formulario = () => {
     });
   };
 
+  const handleConsumoMensual = (e) => {
+    setInput({
+      ...input,
+      consumoMensual: e.target.value,
+    });
+  };
+
   //---------------------------------------------------------------------------------------
 
   //!Valor historico
@@ -223,11 +236,18 @@ const Formulario = () => {
       valorDelKit = kit.diez;
     }
   }
-  //! valor combustible
+  //! valor combustible total
+
+  const combustibles =
+    comuna?.find(
+      (x) => x.comuna?.toLowerCase() === comunas?.toLowerCase()
+    )?.costocombustiblepeaje
+
+
   const combustible = {
-    mil: 1036000,
-    dosmil: 1036000,
-    tresmil: 1450400,
+    mil: combustibles * 5,
+    dosmil: combustibles * 5,
+    tresmil: combustibles * 7,
   };
 
   let valorDelcombustible = 0;
@@ -249,11 +269,16 @@ const Formulario = () => {
     }
   }
   //! para el ahorro
-  let valorUsar = [];
+  let valorUsar = 0;
+
+  const kws = comuna?.find(
+    (x) => x.comuna?.toLowerCase() === comunas?.toLowerCase()
+  )?.generacion
+
   const kw = {
-    uno: 5412,
-    dos: 5412,
-    tres: 18040,
+    uno: kws * 3.3,
+    dos: kws * 5.5,
+    tres: kws * 11,
   };
   if (valorHistorico) {
     if (valorHistorico < 3 * GeneracionKwhKwpYear) {
@@ -274,9 +299,11 @@ const Formulario = () => {
   }
 
   const ahorro =
-    ((valorUsar / 2) * (parseFloat(input.costeDeEnergia) / valorHistorico) +
+    ((valorUsar / 2) * (parseFloat(input.costeDeEnergia) / parseFloat(input.consumoMensual)) + (
       valorUsar / 2) *
-    parseFloat(valorVentaDeEnergia);
+      parseFloat(valorVentaDeEnergia)) || 0;
+
+  console.log(ahorro)
 
 
   let ahorroPorYear = [];
@@ -331,27 +358,47 @@ const Formulario = () => {
     setValor(valor);
   };
 
-  
+  //grafico
+
+  // const data = [
+  //   { name: "María", age: 10, weight: 60 },
+  //   { name: 'Karina', age: 25, weight: 70 },
+  //   { name: 'Susana', age: 15, weight: 65 },
+  //   { name: 'Pedro', age: 35, weight: 85 },
+  //   { name: 'Felipe', age: 12, weight: 48 },
+  //   { name: 'Laura', age: 30, weight: 69 },
+  //   { name: 'Adrián', age: 15, weight: 78 },
+  // ]
+
+  const data = ahorroPorYear?.map((x, y) => {
+    return {
+      años: `${y + 1}`,
+      inversion: x
+    };
+  })
+
+
+
 
 
   return (
     <div className="conteiner p-4">
       <div className="fondo">
-             
-      <a className="btn btn-success" href="https://ochoaim.cl/"><button className= "Boton">Web principal</button></a>
+
+        <a className="btn btn-success" href="https://ochoaim.cl/"><button className="Boton">Web principal</button></a>
         <h1 className="titulo">Cotizador</h1>
       </div>
       <br />
       <br />
       <div>
         <p className="parrafo">
-           Seleccione su comuna eh ingrese el valor de su consumo mensual de los ultimos 12 en kWh luego ingrese el costo de energia. Tenga en cuenta que este se encuentra en su factura de consumo de luz, ya que esto generara un serie de calculos en donde, visualizara su valor de cotizacion continuado de una tabla en donde vera el ahorro energetico.
+          Seleccione su comuna eh ingrese el valor de su consumo mensual de los ultimos 12 en kWh luego ingrese el costo de energia. Tenga en cuenta que este se encuentra en su factura de consumo de luz, ya que esto generara un serie de calculos en donde, visualizara su valor de cotizacion continuado de una tabla en donde vera el ahorro energetico.
 
         </p>
       </div>
       <br />
-      
-      
+
+
 
       <div className="col-md-4 mx-auto">
 
@@ -482,11 +529,23 @@ const Formulario = () => {
             className="col"
             placeholder="Coste De Energia"
           />
+          <br />
+
+          <h3>Consumo del mes Actual</h3>
+          <input
+            type="text"
+            name="consumo"
+            value={input.consumoMensual}
+            onChange={handleConsumoMensual}
+            className="col"
+            placeholder="Consumo Mensual"
+          />
 
         </form>
         <br />
         <br />
       </div>
+
 
 
       <div className="row">
@@ -528,7 +587,7 @@ const Formulario = () => {
           {
             comuna?.find(
               (x) => x.comuna?.toLowerCase() === comunas?.toLowerCase()
-            )?.valorventaenergia 
+            )?.valorventaenergia
           }
         </h4>
 
@@ -539,13 +598,13 @@ const Formulario = () => {
         </h4>
 
 
-        <h4 className="col-sm-4">Valor Kit: </h4>
+        <h4 className="col-sm-4">Valor de Kit (+ IVA): </h4>
         <h4 className="col-sm-8">
           {Intl.NumberFormat().format(valorDelKit)}
         </h4>
 
 
-        <h4 className="col-sm-4">Valor de combustible: </h4>
+        <h4 className="col-sm-4">Valor de combustible Total: </h4>
         <h4 className="col-sm-8">
           {Intl.NumberFormat("en-US", {
             style: "currency",
@@ -565,7 +624,15 @@ const Formulario = () => {
             maximumFractionDigits: 2,
           }).format(valorCotizacion)}
         </h4>
+      </div>
+      <br />
+     
 
+      <div className="row">
+      <h4 className="col-sm-4">Valor Ahorrado: </h4>
+        <h4 className="col-sm-8">
+          {Intl.NumberFormat().format(ahorro)}
+        </h4>
 
       </div>
 
@@ -573,26 +640,56 @@ const Formulario = () => {
 
 
 
-      {ahorroPorYear?.map((x, y) => {
+      {/* {ahorroPorYear?.map((x, y) => {
         return (
-          <table className="table table-success  table-striped" key={y + 1}>
-            <thead>
-              <tr>
-                <th scope="col"><h5>Años</h5></th>
-                <th scope="col"><h5>Inversion</h5></th>
-                <th scope="col"><h5>Ahorro</h5></th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td scope="row">{y + 1}</td>
-                <td>{x}</td>
-                <td>{ahorro}</td>
-              </tr>
-            </tbody>
-          </table>
+          // <table className="table table-success  table-striped" key={y + 1}>
+          //   <thead>
+          //     <tr>
+          //       <th scope="col"><h5>Años</h5></th>
+          //       <th scope="col"><h5>Inversion</h5></th>
+          //       <th scope="col"><h5>Ahorro</h5></th>
+          //     </tr>
+          //   </thead>
+          //   <tbody>
+          //     <tr>
+          //     <td scope="row">{y + 1}</td>
+          //       <td>{x}</td>
+          //       <td>{ahorro}</td>
+          //     </tr>
+          //   </tbody>
+          // </table>
+          <div>
+            {y + 1}
+            {x}
+          </div>
+
         )
-      })}
+      })} */}
+
+      <div>
+        <ResponsiveContainer width="80%" aspect={2}>
+          <AreaChart
+            data={data}
+            width={500}
+            height={300}
+            margin={{
+              top: 5,
+              right: 30,
+              left: 20,
+              bottom: 5
+            }}
+          >
+            <CartesianGrid strokeDasharray="4 " />
+            <XAxis dataKey="años" />
+            <YAxis dataKey="inversion" />
+            <Tooltip />
+            <Area type="monotone" dataKey="inversion" stackId="1" fill="#4551d2"/>
+          
+          </AreaChart>
+        </ResponsiveContainer>
+
+
+      </div>
 
 
       {

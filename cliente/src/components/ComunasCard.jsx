@@ -12,11 +12,12 @@ function ComunasCard({ comuna }) {
   return (
     
 
-    <div>
+    <div class="col-md-6" >
       
       <br />
+
       <div
-        className="card bg-success bg-gradient text-light card-body"
+        className="card bg-success bg-gradient text-light card-body "
         onClick={() => navigate(`/comunas/${comuna.id}/edit`)}
       >
 
